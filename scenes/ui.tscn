@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://hrvebec7hx5v"]
+
+[ext_resource type="Texture2D" uid="uid://bwjhtlcqjd256" path="res://character_pngs/Fall (32x32).png" id="1_hxqk6"]
+[ext_resource type="Texture2D" uid="uid://5x380kj4kh0o" path="res://level_objects_pngs/cherry.png" id="2_dyxqr"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 361.0
+offset_bottom = 98.0
+
+[node name="PointsLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 286.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LivesLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 110.0
+offset_right = -177.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "3
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 112.0
+offset_bottom = 89.0
+texture = ExtResource("1_hxqk6")
+
+[node name="TextureRect3" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 9.0
+offset_right = 292.0
+offset_bottom = 90.0
+texture = ExtResource("2_dyxqr")

@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci2jo4otds74p"]
+
+[ext_resource type="Script" path="res://scripts/LoseScene.cs" id="1_0yok1"]
+[ext_resource type="Texture2D" uid="uid://cx206ee0almcp" path="res://level_objects_pngs/Brown.png" id="2_0ekmb"]
+[ext_resource type="Texture2D" uid="uid://umtdjb7gg8ui" path="res://level_objects_pngs/LoseIMG.png" id="3_fxtjn"]
+
+[node name="LoseScenne" type="Node"]
+script = ExtResource("1_0yok1")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0ekmb")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -329.0
+offset_top = -165.0
+offset_right = 334.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_fxtjn")
+
+[node name="Level1Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = 11.0
+offset_right = -75.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Return to Menu"
+
+[node name="Level2Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 65.0
+offset_top = 11.0
+offset_right = 300.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Quit Game"
+
+[connection signal="pressed" from="Level1Button" to="." method="onButtonPressed1"]
+[connection signal="pressed" from="Level2Button" to="." method="onButtonPressed2"]
