@@ -14,7 +14,6 @@ public partial class MainMenu : Node
 	}
 	public void onButtonPressed2()
 	{
-		GetTree().ChangeSceneToFile("res://scenes/level2.tscn");
-
+		GetTree().Quit();
 	}
 }
