@@ -17,6 +17,7 @@ public partial class GameManager : Node
 		startingPosition = GetNode<Node2D>("%StartingPosition");
 		pointsLabel = ui.GetChild(0).GetChild(0) as Label;
 		livesLabel = ui.GetChild(0).GetChild(1) as Label;
+		hero.Transform = startingPosition.Transform;
 		pointsLabel.Text = Global.points.ToString();
 		livesLabel.Text = Global.lives.ToString();
 	}
