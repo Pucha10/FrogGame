@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c37waf0wqdyac"]
+[gd_scene load_steps=12 format=3 uid="uid://c37waf0wqdyac"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_jftej"]
 [ext_resource type="Texture2D" uid="uid://cx206ee0almcp" path="res://level_objects_pngs/Brown.png" id="2_amco0"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://rxmbghf3x61" path="res://scenes/cherries.tscn" id="5_orqaq"]
 [ext_resource type="PackedScene" uid="uid://cwtkq8gp80uh4" path="res://scenes/endLevel.tscn" id="6_q40aa"]
 [ext_resource type="PackedScene" uid="uid://n1y6dih0lpu6" path="res://scenes/MainMenu.tscn" id="7_5ufq7"]
+[ext_resource type="PackedScene" uid="uid://b2rno8e2kxpfw" path="res://scenes/starting_position.tscn" id="8_b7e0j"]
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/ui.tscn" id="8_tnwks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40lp8"]
@@ -538,6 +539,10 @@ position = Vector2(1756, 68)
 
 [node name="Cherries6" parent="ScenesObjects/CollectableItems" instance=ExtResource("5_orqaq")]
 position = Vector2(2544, 108)
+
+[node name="StartingPosition" parent="ScenesObjects" instance=ExtResource("8_b7e0j")]
+unique_name_in_owner = true
+position = Vector2(76, 597)
 
 [node name="UI" parent="." instance=ExtResource("8_tnwks")]
 unique_name_in_owner = true
