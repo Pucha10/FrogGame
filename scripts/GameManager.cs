@@ -28,12 +28,12 @@ public partial class GameManager : Node
 	public void DoDamage()
 	{
 		hero.Transform = startingPosition.Transform;
-		Global.lives--;
-		livesLabel.Text = Global.lives.ToString();
-		if (Global.lives < 0)
+		if (Global.lives == 0)
 		{
 			GetTree().ChangeSceneToFile("res://scenes/LoseScene.tscn");
+			return;
 		}
-
+		Global.lives--;
+		livesLabel.Text = Global.lives.ToString();
 	}
 }

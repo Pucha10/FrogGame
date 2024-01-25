@@ -3,8 +3,8 @@ using System;
 
 public partial class main_character : CharacterBody2D
 {
-	public int lives = Global.lives;
-	public int points = Global.lives;
+	public uint lives = Global.lives;
+	public uint points = Global.lives;
 	public Transform2D position;
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -900.0f;

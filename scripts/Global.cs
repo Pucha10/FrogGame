@@ -3,7 +3,7 @@ using System;
 
 public partial class Global : Node
 {
-	public static int lives = 3;
-	public static int points = 0;
+	public static uint lives;
+	public static uint points;
 
 }
