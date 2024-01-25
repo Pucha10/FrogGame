@@ -603,6 +603,10 @@ hero = NodePath("../ScenesObjects/CharacterBody2D")
 
 [node name="ScenesObjects" type="Node" parent="."]
 
+[node name="StartingPosition" parent="ScenesObjects" instance=ExtResource("8_5dol5")]
+unique_name_in_owner = true
+position = Vector2(43, 223)
+
 [node name="TextureRect" type="TextureRect" parent="ScenesObjects"]
 texture_filter = 1
 anchors_preset = 15
@@ -670,10 +674,6 @@ targetLevel = ExtResource("7_prlxw")
 
 [node name="Spikes" parent="ScenesObjects/traps_objects" instance=ExtResource("8_wkuvj")]
 position = Vector2(746, 84)
-
-[node name="StartingPosition" parent="ScenesObjects" instance=ExtResource("8_5dol5")]
-unique_name_in_owner = true
-position = Vector2(43, 223)
 
 [node name="UI" parent="." instance=ExtResource("10_jxbjh")]
 unique_name_in_owner = true

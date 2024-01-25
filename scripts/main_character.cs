@@ -17,7 +17,7 @@ public partial class main_character : CharacterBody2D
 	public override void _Ready()
 	{
 		animatedSprite2D = GetNode<AnimatedSprite2D>("%Sprite2D");
-		startingPosition = GetNode<Node2D>("%StartingPosition");
+		startingPosition = GetParent().GetNode<Node2D>("%StartingPosition");
 		position = startingPosition.Transform;
 
 	}
