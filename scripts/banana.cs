@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class cherries : Node
+public partial class banana : Node
 {
 	private GameManager gameManager;
 	public override void _Ready()
@@ -13,7 +13,7 @@ public partial class cherries : Node
 		if (body.Name == "CharacterBody2D")
 		{
 			QueueFree();
-			gameManager.AddCherriesPoints();
+			gameManager.decreaseBananaCount();
 		}
 	}
 }

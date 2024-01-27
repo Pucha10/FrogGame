@@ -5,7 +5,9 @@ public partial class GameManager : Node
 {
 	private Label pointsLabel;
 	private Label livesLabel;
+	private Label bananaLabel;
 	private Node2D startingPosition;
+	public int bananaCounter;
 	private CanvasLayer ui;
 	[Export]
 	public main_character hero;
@@ -17,24 +19,36 @@ public partial class GameManager : Node
 		startingPosition = GetNode<Node2D>("%StartingPosition");
 		pointsLabel = ui.GetChild(0).GetChild(0) as Label;
 		livesLabel = ui.GetChild(0).GetChild(1) as Label;
+		bananaLabel = ui.GetChild(0).GetChild(2) as Label;
+		bananaCounter = GetNode<Node>("%BananaParent").GetChildCount();
 		hero.Transform = startingPosition.Transform;
 		pointsLabel.Text = Global.points.ToString();
 		livesLabel.Text = Global.lives.ToString();
+		bananaLabel.Text = bananaCounter.ToString();
 	}
-	public void AddPoints()
+	public void AddCherriesPoints()
 	{
 		Global.points += 1;
 		pointsLabel.Text = Global.points.ToString();
+	}
+	public void decreaseBananaCount()
+	{
+		bananaCounter--;
+		bananaLabel.Text = bananaCounter.ToString();
 	}
 	public void DoDamage()
 	{
 		hero.Transform = startingPosition.Transform;
 		if (Global.lives == 0)
 		{
-			GetTree().ChangeSceneToFile("res://scenes/LoseScene.tscn");
+			CallDeferred("endGame");
 			return;
 		}
 		Global.lives--;
 		livesLabel.Text = Global.lives.ToString();
+	}
+	private void endGame()
+	{
+		GetTree().ChangeSceneToFile("res://scenes/LoseScene.tscn");
 	}
 }
