@@ -10,7 +10,6 @@ public partial class endLevel : Area2D
 
 	public void onBodyEntered(Node2D body)
 	{
-		GD.Print(gameManager.bananaCounter);
 		if (body.Name == "CharacterBody2D" && gameManager.bananaCounter == 0)
 		{
 			CallDeferred("changeScene");

@@ -11,6 +11,8 @@ public partial class GameManager : Node
 	private CanvasLayer ui;
 	[Export]
 	public main_character hero;
+	private float damageCooldown = 1.0f;
+
 
 	public override void _Ready()
 	{
@@ -39,16 +41,28 @@ public partial class GameManager : Node
 	public void DoDamage()
 	{
 		hero.Transform = startingPosition.Transform;
-		if (Global.lives == 0)
+		if (hero.canTakeDamage)
 		{
-			CallDeferred("endGame");
-			return;
+			hero.canTakeDamage = false;
+			if (Global.lives == 0)
+			{
+				CallDeferred("endGame");
+				return;
+			}
+			Global.lives--;
+			livesLabel.Text = Global.lives.ToString();
+			startDamageCooldown();
 		}
-		Global.lives--;
-		livesLabel.Text = Global.lives.ToString();
+
 	}
 	private void endGame()
 	{
 		GetTree().ChangeSceneToFile("res://scenes/LoseScene.tscn");
+	}
+	private async void startDamageCooldown()
+	{
+		await
+		ToSignal(GetTree().CreateTimer(damageCooldown), "timeout");
+		hero.canTakeDamage = true;
 	}
 }

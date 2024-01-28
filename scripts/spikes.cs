@@ -15,4 +15,5 @@ public partial class spikes : Node
 			gameManager.DoDamage();
 		}
 	}
+
 }

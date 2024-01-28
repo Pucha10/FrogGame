@@ -8,6 +8,7 @@ public partial class main_character : CharacterBody2D
 	public Transform2D position;
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -900.0f;
+	public bool canTakeDamage = true;
 	private AnimatedSprite2D animatedSprite2D;
 	private Node2D startingPosition;
 

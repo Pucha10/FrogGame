@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ceo8iqpcv1m4r"]
+[gd_scene load_steps=15 format=3 uid="uid://ceo8iqpcv1m4r"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_evjgy"]
 [ext_resource type="Texture2D" uid="uid://dix4ywi35xggv" path="res://level_objects_pngs/Green.png" id="2_fd0ok"]
@@ -595,6 +595,9 @@ texture = ExtResource("3_qdwys")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_40lp8")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2odqb"]
+size = Vector2(31.0797, 33.7431)
+
 [node name="Node" type="Node"]
 
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hero")]
@@ -666,12 +669,10 @@ position = Vector2(3340, 318)
 
 [node name="Spikes" parent="ScenesObjects/traps_objects" instance=ExtResource("8_wkuvj")]
 position = Vector2(359, 615)
+scale = Vector2(1.00936, 1)
 
 [node name="Spikes2" parent="ScenesObjects/traps_objects" instance=ExtResource("8_wkuvj")]
-position = Vector2(404, 615)
-
-[node name="Spikes3" parent="ScenesObjects/traps_objects" instance=ExtResource("8_wkuvj")]
-position = Vector2(451, 616)
+position = Vector2(417, 615)
 
 [node name="Spikes4" parent="ScenesObjects/traps_objects" instance=ExtResource("8_wkuvj")]
 position = Vector2(1175, 425)
@@ -774,3 +775,11 @@ position = Vector2(3218, 612)
 
 [node name="UI" parent="." instance=ExtResource("10_jxbjh")]
 unique_name_in_owner = true
+
+[node name="TutorialArenaNode" type="Area2D" parent="."]
+position = Vector2(33, 595)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialArenaNode"]
+position = Vector2(41.5, -10.2071)
+scale = Vector2(4.72978, 2.35858)
+shape = SubResource("RectangleShape2D_2odqb")
