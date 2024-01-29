@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 public partial class main_character : CharacterBody2D
 {
@@ -7,8 +8,11 @@ public partial class main_character : CharacterBody2D
 	public uint points = Global.lives;
 	public Transform2D position;
 	public float Speed = 300.0f;
+	private float additionalSpeed;
 	public float JumpVelocity = -900.0f;
 	public float slize = 12f;
+	private float additionalSlize;
+
 	public bool canTakeDamage = true;
 	private AnimatedSprite2D animatedSprite2D;
 	private Node2D startingPosition;
@@ -67,16 +71,30 @@ public partial class main_character : CharacterBody2D
 	{
 		if (body is TileMap)
 		{
+
 			TileMap tileMap = (TileMap)body;
-			Vector2I globalPosition = (Vector2I)GlobalPosition;
-			GD.Print(globalPosition);
-			TileData tileData = tileMap.GetCellTileData(0, globalPosition);
-			GD.Print(tileData.ToString());
-			// float additionalSpeed = (float)tileData.GetCustomData("addSpeed");
-			// Speed += additionalSpeed;
-
-
+			Vector2 playerPosition = GlobalPosition;
+			Vector2I vector = tileMap.LocalToMap(body.ToLocal(playerPosition));
+			vector.Y += 1;
+			TileData tileData = tileMap.GetCellTileData(0, vector);
+			if (!(tileData is null))
+			{
+				additionalSpeed = (float)tileData.GetCustomData("addSpeed");
+				additionalSlize = (float)tileData.GetCustomData("addSlize");
+				Speed += additionalSpeed;
+				slize -= additionalSlize;
+				GD.Print(Speed + " " + slize);
+				return;
+			}
+			additionalSpeed = 0;
+			additionalSlize = 0;
 		}
 
 	}
+	public void onTileSetDetectorBodyExit(Node2D body)
+	{
+		Speed -= additionalSpeed;
+		slize += additionalSlize;
+	}
+
 }

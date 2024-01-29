@@ -221,3 +221,4 @@ position = Vector2(15.5, 19)
 shape = SubResource("RectangleShape2D_hyuew")
 
 [connection signal="body_entered" from="TileSetDetector" to="." method="onTileSetDetectorBodyEntered"]
+[connection signal="body_exited" from="TileSetDetector" to="." method="onTileSetDetectorBodyExit"]
