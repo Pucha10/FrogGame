@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://ceo8iqpcv1m4r"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_evjgy"]
-[ext_resource type="Texture2D" uid="uid://dix4ywi35xggv" path="res://level_objects_pngs/Green.png" id="2_fd0ok"]
-[ext_resource type="Texture2D" uid="uid://8nyiyiph2qg2" path="res://level_objects_pngs/Terrain (16x16).png" id="3_qdwys"]
+[ext_resource type="Texture2D" uid="uid://dix4ywi35xggv" path="res://level_objects_pngs/background colors/Green.png" id="2_fd0ok"]
+[ext_resource type="Texture2D" uid="uid://8nyiyiph2qg2" path="res://level_objects_pngs/tilesets/Terrain (16x16).png" id="3_qdwys"]
 [ext_resource type="PackedScene" uid="uid://bw6kkp6wsepxl" path="res://scenes/main_character.tscn" id="4_v1pp5"]
-[ext_resource type="Texture2D" uid="uid://cacdlybub342d" path="res://level_objects_pngs/Textures-16.png" id="4_xq4fs"]
+[ext_resource type="Texture2D" uid="uid://cacdlybub342d" path="res://level_objects_pngs/tilesets/Textures-16.png" id="4_xq4fs"]
 [ext_resource type="PackedScene" uid="uid://rxmbghf3x61" path="res://scenes/cherries.tscn" id="5_edd5e"]
 [ext_resource type="PackedScene" uid="uid://cwtkq8gp80uh4" path="res://scenes/endLevel.tscn" id="6_hwkkm"]
 [ext_resource type="PackedScene" uid="uid://c37waf0wqdyac" path="res://scenes/level2.tscn" id="7_prlxw"]
@@ -2385,6 +2385,12 @@ gameManager = NodePath("../../../GameManager")
 
 [node name="Cherries" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("5_edd5e")]
 position = Vector2(236, 504)
+
+[node name="Cherries3" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("5_edd5e")]
+position = Vector2(975, 259)
+
+[node name="Cherries4" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("5_edd5e")]
+position = Vector2(2645, 463)
 
 [node name="Cherries2" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("5_edd5e")]
 position = Vector2(1564, 405)

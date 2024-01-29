@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxythahli802j"
-path="res://.godot/imported/banana.png-61dd5bc32c50aeabe443104281af7287.ctex"
+uid="uid://umtdjb7gg8ui"
+path="res://.godot/imported/LoseIMG.png-8b54ee0f1f61ef41e8dfbecd96ddb081.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level_objects_pngs/banana.png"
-dest_files=["res://.godot/imported/banana.png-61dd5bc32c50aeabe443104281af7287.ctex"]
+source_file="res://level_objects_pngs/titles/LoseIMG.png"
+dest_files=["res://.godot/imported/LoseIMG.png-8b54ee0f1f61ef41e8dfbecd96ddb081.ctex"]
 
 [params]
 

@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_4t1e3"]
 [ext_resource type="PackedScene" uid="uid://b2rno8e2kxpfw" path="res://scenes/starting_position.tscn" id="2_4f0pa"]
-[ext_resource type="Texture2D" uid="uid://dix4ywi35xggv" path="res://level_objects_pngs/Green.png" id="3_b40jr"]
-[ext_resource type="Texture2D" uid="uid://8nyiyiph2qg2" path="res://level_objects_pngs/Terrain (16x16).png" id="4_3s1n5"]
+[ext_resource type="Texture2D" uid="uid://dix4ywi35xggv" path="res://level_objects_pngs/background colors/Green.png" id="3_b40jr"]
+[ext_resource type="Texture2D" uid="uid://8nyiyiph2qg2" path="res://level_objects_pngs/tilesets/Terrain (16x16).png" id="4_3s1n5"]
 [ext_resource type="PackedScene" uid="uid://bw6kkp6wsepxl" path="res://scenes/main_character.tscn" id="5_6id0e"]
-[ext_resource type="Texture2D" uid="uid://cacdlybub342d" path="res://level_objects_pngs/Textures-16.png" id="5_taead"]
+[ext_resource type="Texture2D" uid="uid://cacdlybub342d" path="res://level_objects_pngs/tilesets/Textures-16.png" id="5_taead"]
 [ext_resource type="PackedScene" uid="uid://cwtkq8gp80uh4" path="res://scenes/endLevel.tscn" id="6_dij8s"]
 [ext_resource type="PackedScene" uid="uid://c37waf0wqdyac" path="res://scenes/level2.tscn" id="7_seh26"]
 [ext_resource type="PackedScene" uid="uid://rxmbghf3x61" path="res://scenes/cherries.tscn" id="8_7sqqf"]
@@ -90,7 +90,6 @@ texture = ExtResource("4_3s1n5")
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:1/0/physics_layer_0/angular_velocity = 0.0
@@ -874,10 +873,14 @@ texture = ExtResource("5_taead")
 1:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:6/0/physics_layer_0/angular_velocity = 0.0
 1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:6/0/custom_data_0 = -100.0
+1:6/0/custom_data_1 = -3.0
 2:6/0 = 0
 2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:6/0/physics_layer_0/angular_velocity = 0.0
 2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:6/0/custom_data_0 = -100.0
+2:6/0/custom_data_1 = -3.0
 3:6/0 = 0
 3:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:6/0/physics_layer_0/angular_velocity = 0.0
@@ -2390,7 +2393,7 @@ position = Vector2(1, 0)
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_4kjdo")
 format = 2
-layer_0/tile_data = PackedInt32Array(917498, 458755, 0, 917499, 458755, 0, 917500, 458755, 0, 917501, 458755, 0, 917502, 458755, 0, 917503, 458755, 0, 851970, 458755, 0, 851971, 458755, 0, 851972, 458755, 0, 851973, 458755, 0, 851974, 458755, 0, 851975, 458755, 0, 851976, 458755, 0, 851977, 458755, 0, 851978, 458755, 0, 851979, 458755, 0, 851980, 458755, 0, 851981, 458755, 0, 851986, 458755, 1, 851987, 458755, 1, 851988, 458755, 1, 851989, 458755, 1, 851990, 458755, 0, 851982, 458755, 1, 851983, 458755, 1, 851984, 458755, 1, 851985, 458755, 1, 851991, 458755, 0, 851992, 458755, 0, 851968, 458755, 0, 851969, 458755, 0, 786446, 458755, 1, 786447, 458755, 1, 720912, 196612, 11, 720913, 196612, 11, 786449, 458755, 1, 786448, 458755, 1, 720914, 458755, 1, 720915, 458755, 1, 786451, 458755, 1, 786450, 458755, 1, 720917, 458755, 1, 720916, 458755, 1, 786452, 458755, 1, 786453, 458755, 1, 655382, 196612, 11, 655383, 196612, 11, 655384, 196612, 11, 655385, 196612, 11, 655386, 196612, 11, 655387, 196612, 11, 655388, 196612, 11, 655389, 196612, 11, 655390, 196612, 11, 655391, 196612, 11, 655392, 196612, 11, 655393, 196612, 11, 655394, 196612, 11, 655395, 196612, 11, 655396, 196612, 11, 655397, 196612, 11, 655398, 196612, 11, 655399, 196612, 11, 655381, 196612, 11, 655380, 196612, 11, 655379, 196612, 11, 655378, 196612, 11, 720911, 196612, 11, 720910, 196612, 11)
+layer_0/tile_data = PackedInt32Array(917498, 458755, 0, 917499, 458755, 0, 917500, 458755, 0, 917501, 458755, 0, 917502, 458755, 0, 917503, 458755, 0, 851970, 458755, 0, 851971, 458755, 0, 851972, 458755, 0, 851973, 458755, 0, 851974, 458755, 0, 851975, 131076, 6, 851976, 131076, 6, 851977, 131076, 6, 851978, 131076, 6, 851979, 131076, 6, 851980, 131076, 6, 851981, 131076, 6, 851986, 458755, 1, 851987, 458755, 1, 851988, 458755, 1, 851989, 458755, 1, 851990, 458755, 0, 851982, 458755, 1, 851983, 458755, 1, 851984, 458755, 1, 851985, 458755, 1, 851991, 458755, 0, 851992, 458755, 0, 851968, 458755, 0, 851969, 458755, 0, 786446, 458755, 1, 786447, 458755, 1, 720912, 196612, 11, 720913, 196612, 11, 786449, 458755, 1, 786448, 458755, 1, 720914, 458755, 1, 720915, 458755, 1, 786451, 458755, 1, 786450, 458755, 1, 720917, 458755, 1, 720916, 458755, 1, 786452, 458755, 1, 786453, 458755, 1, 655382, 196612, 11, 655383, 196612, 11, 655384, 196612, 11, 655385, 196612, 11, 655386, 196612, 11, 655387, 196612, 11, 655388, 196612, 11, 655389, 196612, 11, 655390, 196612, 11, 655391, 196612, 11, 655392, 196612, 11, 655393, 196612, 11, 655394, 196612, 11, 655395, 196612, 11, 655396, 196612, 11, 655397, 196612, 11, 655398, 196612, 11, 655399, 196612, 11, 655381, 196612, 11, 655380, 196612, 11, 655379, 196612, 11, 655378, 196612, 11, 720911, 196612, 11, 720910, 196612, 11, 851962, 65539, 1, 851963, 65539, 1, 851964, 65539, 1, 851965, 65539, 1, 786426, 65539, 1, 786427, 65539, 1, 786428, 65539, 1, 786429, 65539, 1)
 
 [node name="CharacterBody2D" parent="ScenesObjects" instance=ExtResource("5_6id0e")]
 unique_name_in_owner = true
@@ -2404,7 +2407,7 @@ position_smoothing_speed = 7.0
 [node name="CollectableItems" type="Node" parent="ScenesObjects"]
 
 [node name="EndLevel" parent="ScenesObjects/CollectableItems" node_paths=PackedStringArray("gameManager") instance=ExtResource("6_dij8s")]
-position = Vector2(541, 577)
+position = Vector2(1094, 573)
 targetLevel = ExtResource("7_seh26")
 gameManager = NodePath("../../../GameManager")
 
