@@ -13,7 +13,7 @@ public partial class cherries : Node
 		if (body.Name == "CharacterBody2D")
 		{
 			QueueFree();
-			gameManager.AddPoints();
+			gameManager.AddCherriesPoints();
 		}
 	}
 }

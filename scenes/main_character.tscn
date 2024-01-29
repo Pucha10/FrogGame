@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bw6kkp6wsepxl"]
+[gd_scene load_steps=32 format=3 uid="uid://bw6kkp6wsepxl"]
 
 [ext_resource type="Script" path="res://scripts/main_character.cs" id="1_1kvr4"]
 [ext_resource type="Texture2D" uid="uid://cn6npka7drjgx" path="res://character_pngs/Jump (32x32).png" id="1_5rxo8"]
@@ -194,6 +194,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1kx8"]
 size = Vector2(46, 52)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyuew"]
+size = Vector2(43, 52)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 texture_filter = 1
 script = ExtResource("1_1kvr4")
@@ -210,3 +213,12 @@ autoplay = "iddle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(16, 18)
 shape = SubResource("RectangleShape2D_x1kx8")
+
+[node name="TileSetDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileSetDetector"]
+position = Vector2(15.5, 19)
+shape = SubResource("RectangleShape2D_hyuew")
+
+[connection signal="body_entered" from="TileSetDetector" to="." method="onTileSetDetectorBodyEntered"]
+[connection signal="body_exited" from="TileSetDetector" to="." method="onTileSetDetectorBodyExit"]

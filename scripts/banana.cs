@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class spikes : Node
+public partial class banana : Node
 {
 	private GameManager gameManager;
 	public override void _Ready()
@@ -12,8 +12,8 @@ public partial class spikes : Node
 	{
 		if (body.Name == "CharacterBody2D")
 		{
-			gameManager.DoDamage();
+			QueueFree();
+			gameManager.decreaseBananaCount();
 		}
 	}
-
 }
