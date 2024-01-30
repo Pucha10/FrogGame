@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ci2jo4otds74p"]
 
 [ext_resource type="Script" path="res://scripts/LoseScene.cs" id="1_0yok1"]
-[ext_resource type="Texture2D" uid="uid://cx206ee0almcp" path="res://level_objects_pngs/Brown.png" id="2_0ekmb"]
-[ext_resource type="Texture2D" uid="uid://umtdjb7gg8ui" path="res://level_objects_pngs/LoseIMG.png" id="3_fxtjn"]
+[ext_resource type="Texture2D" uid="uid://cx206ee0almcp" path="res://level_objects_pngs/background colors/Brown.png" id="2_0ekmb"]
+[ext_resource type="Texture2D" uid="uid://umtdjb7gg8ui" path="res://level_objects_pngs/titles/LoseIMG.png" id="3_fxtjn"]
 
 [node name="LoseScenne" type="Node"]
 script = ExtResource("1_0yok1")

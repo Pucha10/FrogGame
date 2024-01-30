@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l35ywi6m8v5w"
-path="res://.godot/imported/Bananas.png-d9b5941d71f8734c5f4a582b546c1e34.ctex"
+uid="uid://dix4ywi35xggv"
+path="res://.godot/imported/Green.png-9c76fe581dd853e28f9447cc7599974b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level_objects_pngs/Bananas.png"
-dest_files=["res://.godot/imported/Bananas.png-d9b5941d71f8734c5f4a582b546c1e34.ctex"]
+source_file="res://level_objects_pngs/background colors/Green.png"
+dest_files=["res://.godot/imported/Green.png-9c76fe581dd853e28f9447cc7599974b.ctex"]
 
 [params]
 

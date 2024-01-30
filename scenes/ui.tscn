@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://hrvebec7hx5v"]
 
 [ext_resource type="Texture2D" uid="uid://bwjhtlcqjd256" path="res://character_pngs/Fall (32x32).png" id="1_hxqk6"]
-[ext_resource type="Texture2D" uid="uid://5x380kj4kh0o" path="res://level_objects_pngs/cherry.png" id="2_dyxqr"]
-[ext_resource type="Texture2D" uid="uid://k4jhpg7kvcgg" path="res://level_objects_pngs/zapis.png" id="3_tsrgk"]
+[ext_resource type="Texture2D" uid="uid://5x380kj4kh0o" path="res://level_objects_pngs/UIs/cherry.png" id="2_btpnb"]
+[ext_resource type="Texture2D" uid="uid://k4jhpg7kvcgg" path="res://level_objects_pngs/UIs/zapis.png" id="3_q62em"]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -77,7 +77,7 @@ offset_left = 207.0
 offset_top = 9.0
 offset_right = 292.0
 offset_bottom = 90.0
-texture = ExtResource("2_dyxqr")
+texture = ExtResource("2_btpnb")
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
 texture_filter = 1
@@ -85,5 +85,5 @@ layout_mode = 0
 offset_left = 372.0
 offset_right = 486.0
 offset_bottom = 102.0
-texture = ExtResource("3_tsrgk")
+texture = ExtResource("3_q62em")
 expand_mode = 1

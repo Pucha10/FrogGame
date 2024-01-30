@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k4jhpg7kvcgg"
-path="res://.godot/imported/zapis.png-95ff349cb051ce123addad1dfbadb8ec.ctex"
+uid="uid://cx206ee0almcp"
+path="res://.godot/imported/Brown.png-855d75c5528e054b6ebf2aa04c0beb1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level_objects_pngs/zapis.png"
-dest_files=["res://.godot/imported/zapis.png-95ff349cb051ce123addad1dfbadb8ec.ctex"]
+source_file="res://level_objects_pngs/background colors/Brown.png"
+dest_files=["res://.godot/imported/Brown.png-855d75c5528e054b6ebf2aa04c0beb1a.ctex"]
 
 [params]
 

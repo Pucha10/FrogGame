@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by23s2qw4o8jg"
-path="res://.godot/imported/title.png-d9d04e0a642e9fac3c9345f9684d4e96.ctex"
+uid="uid://cghgntm3k2qym"
+path="res://.godot/imported/On (16x32).png-10005c79dcdd034120445684ee56a9c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level_objects_pngs/title.png"
-dest_files=["res://.godot/imported/title.png-d9d04e0a642e9fac3c9345f9684d4e96.ctex"]
+source_file="res://level_objects_pngs/traps_pngs/flames/On (16x32).png"
+dest_files=["res://.godot/imported/On (16x32).png-10005c79dcdd034120445684ee56a9c9.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://1clmtym25y5j"]
 
-[ext_resource type="Texture2D" uid="uid://d2c68safg6r7c" path="res://level_objects_pngs/Idle.png" id="1_wf8t3"]
 [ext_resource type="Script" path="res://scripts/spikes.cs" id="2_7ird3"]
+[ext_resource type="Texture2D" uid="uid://d2c68safg6r7c" path="res://level_objects_pngs/traps_pngs/Idle.png" id="2_88qsl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mn5lb"]
 size = Vector2(45, 23)
@@ -14,7 +14,7 @@ script = ExtResource("2_7ird3")
 texture_filter = 1
 position = Vector2(2, -15.5)
 scale = Vector2(3, 3.3125)
-texture = ExtResource("1_wf8t3")
+texture = ExtResource("2_88qsl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -0.5)

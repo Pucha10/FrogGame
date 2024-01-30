@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx206ee0almcp"
-path="res://.godot/imported/Brown.png-634e4dcef3a39ab5822cccf71b45393f.ctex"
+uid="uid://cyqffls18dkw4"
+path="res://.godot/imported/Cherries.png-0c2be40331bdef77d32fdb0838fd16f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level_objects_pngs/Brown.png"
-dest_files=["res://.godot/imported/Brown.png-634e4dcef3a39ab5822cccf71b45393f.ctex"]
+source_file="res://level_objects_pngs/colectables/Cherries.png"
+dest_files=["res://.godot/imported/Cherries.png-0c2be40331bdef77d32fdb0838fd16f7.ctex"]
 
 [params]
 

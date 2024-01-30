@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caktnxd3kmw2q"
-path="res://.godot/imported/End (Idle).png-60d579f2c3ffd623e08bb9b099dcff69.ctex"
+uid="uid://d2c68safg6r7c"
+path="res://.godot/imported/Idle.png-765ccaecb3812eea0d15f912edf21a9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level_objects_pngs/End (Idle).png"
-dest_files=["res://.godot/imported/End (Idle).png-60d579f2c3ffd623e08bb9b099dcff69.ctex"]
+source_file="res://level_objects_pngs/traps_pngs/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-765ccaecb3812eea0d15f912edf21a9a.ctex"]
 
 [params]
 
