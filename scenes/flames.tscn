@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://dv43mbnn18elk"]
+
+[ext_resource type="Texture2D" uid="uid://b0jjmduc2qjxt" path="res://level_objects_pngs/traps_pngs/flames/Off.png" id="1_2ekip"]
+[ext_resource type="Script" path="res://scripts/flames.cs" id="1_78t2k"]
+[ext_resource type="Texture2D" uid="uid://cghgntm3k2qym" path="res://level_objects_pngs/traps_pngs/flames/On (16x32).png" id="2_gnoos"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oiwu3"]
+atlas = ExtResource("2_gnoos")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2dqy"]
+atlas = ExtResource("2_gnoos")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45vmf"]
+atlas = ExtResource("2_gnoos")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fuwk0"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": ExtResource("1_2ekip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiwu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2dqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45vmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiwu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2dqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45vmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiwu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2dqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45vmf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rayje"]
+size = Vector2(37.5, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cadd8"]
+size = Vector2(53.25, 43.25)
+
+[node name="Flames" type="Area2D"]
+script = ExtResource("1_78t2k")
+
+[node name="FlamesAnimation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3, -17.75)
+scale = Vector2(3.5, 2.95313)
+sprite_frames = SubResource("SpriteFrames_fuwk0")
+autoplay = "default"
+frame_progress = 0.206827
+
+[node name="FlamesColisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(3, -39)
+shape = SubResource("RectangleShape2D_rayje")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3.375, 6.625)
+shape = SubResource("RectangleShape2D_cadd8")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

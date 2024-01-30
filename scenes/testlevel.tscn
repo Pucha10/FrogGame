@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://chvk16t7bjeud"]
+[gd_scene load_steps=17 format=3 uid="uid://chvk16t7bjeud"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_4t1e3"]
 [ext_resource type="PackedScene" uid="uid://b2rno8e2kxpfw" path="res://scenes/starting_position.tscn" id="2_4f0pa"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" path="res://scenes/banana.tscn" id="9_ybfbp"]
 [ext_resource type="PackedScene" uid="uid://1clmtym25y5j" path="res://scenes/spikes.tscn" id="10_i1co1"]
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/ui.tscn" id="11_lcsh2"]
+[ext_resource type="PackedScene" uid="uid://dv43mbnn18elk" path="res://scenes/flames.tscn" id="12_lnl46"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xu4ko"]
 texture = ExtResource("4_3s1n5")
@@ -2414,21 +2415,32 @@ gameManager = NodePath("../../../GameManager")
 [node name="CherriesParent" type="Node" parent="ScenesObjects/CollectableItems"]
 
 [node name="Cherries" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("8_7sqqf")]
-position = Vector2(166, 576)
+position = Vector2(1268, 441)
 
 [node name="BananaParent" type="Node" parent="ScenesObjects/CollectableItems"]
 unique_name_in_owner = true
 
 [node name="Banana" parent="ScenesObjects/CollectableItems/BananaParent" instance=ExtResource("9_ybfbp")]
-position = Vector2(453, 598)
+position = Vector2(1366, 456)
 
 [node name="traps_objects" type="Node" parent="ScenesObjects"]
 
 [node name="Spikes" parent="ScenesObjects/traps_objects" instance=ExtResource("10_i1co1")]
-position = Vector2(275, 614)
+position = Vector2(634, 611)
 
 [node name="Spikes2" parent="ScenesObjects/traps_objects" instance=ExtResource("10_i1co1")]
-position = Vector2(321, 614)
+position = Vector2(1677, 472)
+
+[node name="Flames" parent="ScenesObjects/traps_objects" instance=ExtResource("12_lnl46")]
+position = Vector2(360, 602)
+frame = 4
+
+[node name="Flames2" parent="ScenesObjects/traps_objects" instance=ExtResource("12_lnl46")]
+position = Vector2(413, 601)
+
+[node name="Flames3" parent="ScenesObjects/traps_objects" instance=ExtResource("12_lnl46")]
+position = Vector2(467, 601)
+speedScale = 3.0
 
 [node name="UI" parent="." instance=ExtResource("11_lcsh2")]
 unique_name_in_owner = true
