@@ -71,7 +71,6 @@ public partial class main_character : CharacterBody2D
 	{
 		if (body is TileMap)
 		{
-			GD.Print("Wykonałem sie");
 			TileMap tileMap = (TileMap)body;
 			Vector2 playerPosition = GlobalPosition;
 			Vector2I vector = tileMap.LocalToMap(body.ToLocal(playerPosition));
@@ -83,7 +82,6 @@ public partial class main_character : CharacterBody2D
 				additionalSlize = (float)tileData.GetCustomData("addSlize");
 				Speed += additionalSpeed;
 				slize -= additionalSlize;
-				GD.Print(Speed + " " + slize);
 				return;
 			}
 			additionalSpeed = 0;
