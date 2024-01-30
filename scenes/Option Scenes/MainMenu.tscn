@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://n1y6dih0lpu6"]
 
-[ext_resource type="Script" path="res://scripts/MainMenu.cs" id="1_cd50s"]
-[ext_resource type="Texture2D" uid="uid://cx206ee0almcp" path="res://level_objects_pngs/background colors/Brown.png" id="2_hmf77"]
-[ext_resource type="Texture2D" uid="uid://by23s2qw4o8jg" path="res://level_objects_pngs/titles/title.png" id="3_i43ch"]
+[ext_resource type="Script" path="res://scripts/MainMenu.cs" id="1_0jur4"]
+[ext_resource type="Texture2D" uid="uid://cx206ee0almcp" path="res://level_objects_pngs/background colors/Brown.png" id="2_uq34c"]
+[ext_resource type="Texture2D" uid="uid://by23s2qw4o8jg" path="res://level_objects_pngs/titles/title.png" id="3_6ppaa"]
 
 [node name="MainMenu" type="Node"]
-script = ExtResource("1_cd50s")
+script = ExtResource("1_0jur4")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 texture_filter = 1
@@ -14,7 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hmf77")
+texture = ExtResource("2_uq34c")
 stretch_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -29,7 +29,7 @@ offset_right = 334.0
 offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_i43ch")
+texture = ExtResource("3_6ppaa")
 
 [node name="Level1Button" type="Button" parent="."]
 anchors_preset = 8
