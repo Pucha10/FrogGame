@@ -16,6 +16,7 @@ collision_layer = 2
 collision_mask = 3
 mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_ihaeb")
+gravity_scale = 0.0
 max_contacts_reported = 1
 contact_monitor = true
 script = ExtResource("1_jk4fc")

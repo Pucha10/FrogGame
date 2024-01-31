@@ -14,10 +14,20 @@ public partial class spike_ball : RigidBody2D
 		LinearVelocity = new Vector2(xVelocity, yVelocity);
 
 	}
-	public void OnBodyEntered(Node body)
+	public void OnBodyEntered(Node2D body)
 	{
-		xVelocity = -xVelocity;
-		yVelocity = -yVelocity;
+		if ((LinearVelocity.X < 0 && xVelocity > 0) || (LinearVelocity.X > 0 && xVelocity < 0))
+		{
+			xVelocity = -xVelocity;
+		}
+
+		if ((LinearVelocity.Y < 0 && yVelocity > 0) || (LinearVelocity.Y > 0 && yVelocity < 0))
+		{
+			yVelocity = -yVelocity;
+		}
+		// xVelocity = -xVelocity;
+		// yVelocity = -yVelocity;
+		GD.Print(LinearVelocity);
 		LinearVelocity = new Vector2(xVelocity, yVelocity);
 		if (body.Name == "CharacterBody2D")
 		{
