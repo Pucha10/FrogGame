@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://n1y6dih0lpu6"]
 
-[ext_resource type="Script" path="res://scripts/MainMenu.cs" id="1_0jur4"]
+[ext_resource type="Script" path="res://scripts/scenes_scripts/MainMenu.cs" id="1_b3jkk"]
 [ext_resource type="Texture2D" uid="uid://cx206ee0almcp" path="res://level_objects_pngs/background colors/Brown.png" id="2_uq34c"]
 [ext_resource type="Texture2D" uid="uid://by23s2qw4o8jg" path="res://level_objects_pngs/titles/title.png" id="3_6ppaa"]
 
 [node name="MainMenu" type="Node"]
-script = ExtResource("1_0jur4")
+script = ExtResource("1_b3jkk")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 texture_filter = 1

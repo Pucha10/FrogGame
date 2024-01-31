@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://g0dr4w43cby8"]
 
 [ext_resource type="Texture2D" uid="uid://co38iiw6i4d58" path="res://level_objects_pngs/traps_pngs/Spiked Ball.png" id="1_fu0ib"]
-[ext_resource type="Script" path="res://scripts/spike_ball.cs" id="1_jk4fc"]
+[ext_resource type="Script" path="res://scripts/traps/spike_ball.cs" id="1_ymwv7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ihaeb"]
 friction = 0.0
@@ -19,7 +19,7 @@ physics_material_override = SubResource("PhysicsMaterial_ihaeb")
 gravity_scale = 0.0
 max_contacts_reported = 1
 contact_monitor = true
-script = ExtResource("1_jk4fc")
+script = ExtResource("1_ymwv7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dv43mbnn18elk"]
 
 [ext_resource type="Texture2D" uid="uid://b0jjmduc2qjxt" path="res://level_objects_pngs/traps_pngs/flames/Off.png" id="1_2ekip"]
-[ext_resource type="Script" path="res://scripts/flames.cs" id="1_78t2k"]
+[ext_resource type="Script" path="res://scripts/traps/flames.cs" id="1_78t2k"]
 [ext_resource type="Texture2D" uid="uid://cghgntm3k2qym" path="res://level_objects_pngs/traps_pngs/flames/On (16x32).png" id="2_gnoos"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oiwu3"]

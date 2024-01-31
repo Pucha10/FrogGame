@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ci2jo4otds74p"]
 
-[ext_resource type="Script" path="res://scripts/LoseScene.cs" id="1_ehd6g"]
+[ext_resource type="Script" path="res://scripts/scenes_scripts/LoseScene.cs" id="1_ehd6g"]
 [ext_resource type="Texture2D" uid="uid://cx206ee0almcp" path="res://level_objects_pngs/background colors/Brown.png" id="2_f43ct"]
 [ext_resource type="Texture2D" uid="uid://umtdjb7gg8ui" path="res://level_objects_pngs/titles/LoseIMG.png" id="3_08fq8"]
 
