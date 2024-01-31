@@ -2573,7 +2573,7 @@ sources/3 = SubResource("TileSetAtlasSource_xu4ko")
 sources/4 = SubResource("TileSetAtlasSource_g25e3")
 sources/0 = SubResource("TileSetAtlasSource_sin3s")
 
-[node name="Node" type="Node"]
+[node name="TestLevel" type="Node"]
 script = ExtResource("1_cyrsm")
 
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hero")]

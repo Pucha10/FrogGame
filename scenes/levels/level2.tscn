@@ -2546,7 +2546,7 @@ sources/0 = SubResource("TileSetAtlasSource_40lp8")
 sources/1 = SubResource("TileSetAtlasSource_lv4t7")
 sources/2 = SubResource("TileSetAtlasSource_4p486")
 
-[node name="Node" type="Node"]
+[node name="Level2" type="Node"]
 
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hero")]
 unique_name_in_owner = true

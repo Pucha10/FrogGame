@@ -2330,7 +2330,7 @@ custom_data_layer_1/type = 3
 sources/0 = SubResource("TileSetAtlasSource_40lp8")
 sources/2 = SubResource("TileSetAtlasSource_1cgvm")
 
-[node name="Node" type="Node"]
+[node name="Level1" type="Node"]
 
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hero")]
 unique_name_in_owner = true
