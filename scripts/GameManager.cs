@@ -16,7 +16,6 @@ public partial class GameManager : Node
 
 	public override void _Ready()
 	{
-		GD.Print(Global.lives);
 		ui = GetNode<CanvasLayer>("%UI");
 		startingPosition = GetNode<Node2D>("%StartingPosition");
 		pointsLabel = ui.GetChild(0).GetChild(0) as Label;
