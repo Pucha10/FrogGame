@@ -5,7 +5,7 @@ public partial class LoseScene : Node
 {
 	public void onButtonPressed1()
 	{
-		GetTree().ChangeSceneToFile("res://scenes/MainMenu.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/Option Scenes/MainMenu.tscn");
 	}
 	public void onButtonPressed2()
 	{

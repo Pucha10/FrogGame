@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://n1y6dih0lpu6"]
+[gd_scene load_steps=4 format=3 uid="uid://ci2jo4otds74p"]
 
-[ext_resource type="Script" path="res://scripts/MainMenu.cs" id="1_cd50s"]
-[ext_resource type="Texture2D" uid="uid://cx206ee0almcp" path="res://level_objects_pngs/background colors/Brown.png" id="2_hmf77"]
-[ext_resource type="Texture2D" uid="uid://by23s2qw4o8jg" path="res://level_objects_pngs/titles/title.png" id="3_i43ch"]
+[ext_resource type="Script" path="res://scripts/scenes_scripts/LoseScene.cs" id="1_ehd6g"]
+[ext_resource type="Texture2D" uid="uid://cx206ee0almcp" path="res://level_objects_pngs/background colors/Brown.png" id="2_f43ct"]
+[ext_resource type="Texture2D" uid="uid://umtdjb7gg8ui" path="res://level_objects_pngs/titles/LoseIMG.png" id="3_08fq8"]
 
-[node name="MainMenu" type="Node"]
-script = ExtResource("1_cd50s")
+[node name="LoseScenne" type="Node"]
+script = ExtResource("1_ehd6g")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 texture_filter = 1
@@ -14,7 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hmf77")
+texture = ExtResource("2_f43ct")
 stretch_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -29,7 +29,7 @@ offset_right = 334.0
 offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_i43ch")
+texture = ExtResource("3_08fq8")
 
 [node name="Level1Button" type="Button" parent="."]
 anchors_preset = 8
@@ -44,7 +44,7 @@ offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
-text = "Start Game"
+text = "Return to Menu"
 
 [node name="Level2Button" type="Button" parent="."]
 anchors_preset = 8

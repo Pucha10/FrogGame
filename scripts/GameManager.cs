@@ -16,7 +16,6 @@ public partial class GameManager : Node
 
 	public override void _Ready()
 	{
-		GD.Print(Global.lives);
 		ui = GetNode<CanvasLayer>("%UI");
 		startingPosition = GetNode<Node2D>("%StartingPosition");
 		pointsLabel = ui.GetChild(0).GetChild(0) as Label;
@@ -31,6 +30,12 @@ public partial class GameManager : Node
 	public void AddCherriesPoints()
 	{
 		Global.points += 1;
+		if (Global.points == 10)
+		{
+			Global.lives += 1;
+			Global.points = 0;
+			livesLabel.Text = Global.lives.ToString();
+		}
 		pointsLabel.Text = Global.points.ToString();
 	}
 	public void decreaseBananaCount()
@@ -57,7 +62,7 @@ public partial class GameManager : Node
 	}
 	private void endGame()
 	{
-		GetTree().ChangeSceneToFile("res://scenes/LoseScene.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/Option Scenes/LoseScene.tscn");
 	}
 	private async void startDamageCooldown()
 	{
