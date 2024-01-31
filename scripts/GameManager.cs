@@ -60,6 +60,10 @@ public partial class GameManager : Node
 		}
 
 	}
+	public void AddJump(float additionalJump)
+	{
+
+	}
 	private void endGame()
 	{
 		GetTree().ChangeSceneToFile("res://scenes/Option Scenes/LoseScene.tscn");

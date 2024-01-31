@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://chvk16t7bjeud"]
+[gd_scene load_steps=22 format=3 uid="uid://chvk16t7bjeud"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_4t1e3"]
 [ext_resource type="Script" path="res://scripts/scenes_scripts/testlevel.cs" id="1_cyrsm"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/Option Scenes/ui.tscn" id="11_lcsh2"]
 [ext_resource type="PackedScene" uid="uid://dv43mbnn18elk" path="res://scenes/traps/flames.tscn" id="12_lnl46"]
 [ext_resource type="PackedScene" uid="uid://g0dr4w43cby8" path="res://scenes/traps/spike_ball.tscn" id="13_0lpup"]
+[ext_resource type="PackedScene" uid="uid://cg7e03w44kosx" path="res://scenes/traps/trampoline.tscn" id="16_5o745"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sin3s"]
 texture = ExtResource("5_tdbr2")
@@ -2655,6 +2656,9 @@ yVelocity = 300.0
 position = Vector2(60, 371)
 xVelocity = 200.0
 yVelocity = 500.0
+
+[node name="Trampoline" parent="ScenesObjects/traps_objects" instance=ExtResource("16_5o745")]
+position = Vector2(701, 493)
 
 [node name="UI" parent="." instance=ExtResource("11_lcsh2")]
 unique_name_in_owner = true
