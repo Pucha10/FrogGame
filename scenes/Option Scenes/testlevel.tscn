@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://chvk16t7bjeud"]
+[gd_scene load_steps=23 format=3 uid="uid://chvk16t7bjeud"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_4t1e3"]
 [ext_resource type="Script" path="res://scripts/scenes_scripts/testlevel.cs" id="1_cyrsm"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dv43mbnn18elk" path="res://scenes/traps/flames.tscn" id="12_lnl46"]
 [ext_resource type="PackedScene" uid="uid://g0dr4w43cby8" path="res://scenes/traps/spike_ball.tscn" id="13_0lpup"]
 [ext_resource type="PackedScene" uid="uid://cg7e03w44kosx" path="res://scenes/traps/trampoline.tscn" id="16_5o745"]
+[ext_resource type="PackedScene" uid="uid://ccj61aoern344" path="res://scenes/traps/falling_platform.tscn" id="17_mi5vf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sin3s"]
 texture = ExtResource("5_tdbr2")
@@ -2644,8 +2645,8 @@ position = Vector2(1366, 456)
 position = Vector2(634, 611)
 
 [node name="Flames" parent="ScenesObjects/traps_objects" instance=ExtResource("12_lnl46")]
-position = Vector2(360, 602)
-frame = 4
+position = Vector2(1092, 450)
+speedScale = 3.0
 
 [node name="SpikeBall" parent="ScenesObjects/traps_objects" instance=ExtResource("13_0lpup")]
 position = Vector2(-187, 377)
@@ -2659,6 +2660,9 @@ yVelocity = 500.0
 
 [node name="Trampoline" parent="ScenesObjects/traps_objects" instance=ExtResource("16_5o745")]
 position = Vector2(701, 493)
+additionalJump = 2000.0
+
+[node name="FallingPlatform" parent="ScenesObjects/traps_objects" instance=ExtResource("17_mi5vf")]
 
 [node name="UI" parent="." instance=ExtResource("11_lcsh2")]
 unique_name_in_owner = true

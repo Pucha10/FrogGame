@@ -6,7 +6,7 @@ public partial class trampoline : Area2D
 	private GameManager gameManager;
 	private AnimatedSprite2D animatedSprite2D;
 	[Export]
-	public float additionalJump = -1350f;
+	public float additionalJump = 1350f;
 
 	public override void _Ready()
 	{
@@ -18,7 +18,7 @@ public partial class trampoline : Area2D
 		Vector2 velocity = body.Velocity;
 		animatedSprite2D.Animation = "jump";
 		animatedSprite2D.Play();
-		velocity.Y = additionalJump;
+		velocity.Y = -additionalJump;
 		body.Velocity = velocity;
 	}
 	private void OnAnimationFinished()
