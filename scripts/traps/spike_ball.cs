@@ -8,9 +8,11 @@ public partial class spike_ball : RigidBody2D
 	public float xVelocity;
 	[Export]
 	public float yVelocity;
+	public SpikeBallsParrent spikeBallsParrent;
 	public override void _Ready()
 	{
 		gameManager = GetNode<GameManager>("%GameManager");
+		spikeBallsParrent = GetParent<SpikeBallsParrent>();
 		LinearVelocity = new Vector2(xVelocity, yVelocity);
 
 	}
@@ -28,8 +30,13 @@ public partial class spike_ball : RigidBody2D
 		// xVelocity = -xVelocity;
 		// yVelocity = -yVelocity;
 		LinearVelocity = new Vector2(xVelocity, yVelocity);
+	}
+	public void OnDamageArenaBodyEntered(Node2D body)
+	{
+		GD.Print("Here");
 		if (body.Name == "CharacterBody2D")
 		{
+			spikeBallsParrent.ResetChildren();
 			gameManager.DoDamage();
 		}
 	}
