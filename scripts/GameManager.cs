@@ -54,14 +54,11 @@ public partial class GameManager : Node
 				CallDeferred("endGame");
 				return;
 			}
+			hero.Velocity = new Vector2(0, 0);
 			Global.lives--;
 			livesLabel.Text = Global.lives.ToString();
 			startDamageCooldown();
 		}
-
-	}
-	public void AddJump(float additionalJump)
-	{
 
 	}
 	private void endGame()

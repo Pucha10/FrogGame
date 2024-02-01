@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://chvk16t7bjeud"]
+[gd_scene load_steps=23 format=3 uid="uid://chvk16t7bjeud"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_4t1e3"]
 [ext_resource type="Script" path="res://scripts/scenes_scripts/testlevel.cs" id="1_cyrsm"]
@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://g0dr4w43cby8" path="res://scenes/traps/spike_ball.tscn" id="13_0lpup"]
 [ext_resource type="PackedScene" uid="uid://bgj6rb82g8wsa" path="res://scenes/traps/trampoline.tscn" id="16_5o745"]
 [ext_resource type="PackedScene" uid="uid://drknkksu404f7" path="res://scenes/traps/falling_platform.tscn" id="17_mi5vf"]
-[ext_resource type="Script" path="res://scripts/traps/SpikeBallsParrent.cs" id="17_wb5sf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sin3s"]
 texture = ExtResource("5_tdbr2")
@@ -2659,7 +2658,6 @@ position = Vector2(531, 413)
 
 [node name="SpikeBalls" type="Node" parent="ScenesObjects/traps_objects"]
 unique_name_in_owner = true
-script = ExtResource("17_wb5sf")
 
 [node name="SpikeBall2" parent="ScenesObjects/traps_objects/SpikeBalls" instance=ExtResource("13_0lpup")]
 position = Vector2(328, 345)

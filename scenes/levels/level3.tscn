@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://1clmtym25y5j" path="res://scenes/traps/spikes.tscn" id="12_3sloj"]
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/Option Scenes/ui.tscn" id="13_48nww"]
 [ext_resource type="PackedScene" uid="uid://g0dr4w43cby8" path="res://scenes/traps/spike_ball.tscn" id="15_fya8r"]
-[ext_resource type="Script" path="res://scripts/traps/SpikeBallsParrent.cs" id="16_bdwl3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40lp8"]
 texture = ExtResource("4_lvxw7")
@@ -2551,6 +2550,27 @@ sources/0 = SubResource("TileSetAtlasSource_40lp8")
 sources/1 = SubResource("TileSetAtlasSource_lv4t7")
 sources/2 = SubResource("TileSetAtlasSource_4p486")
 
+[sub_resource type="CSharpScript" id="CSharpScript_5l8t2"]
+script/source = "using Godot;
+using System;
+
+public partial class SpikeBallsParrent : Node
+{
+
+	public void ResetChildren()
+	{
+		GD.Print(\"Reset dzieci\");
+		foreach (RigidBody2D child in GetChildren())
+		{
+			GD.Print(\"Tutaj jestem\");
+			GD.Print(child.LinearVelocity);
+			child.Position = new Vector2(0, 0);
+		}
+	}
+}
+
+"
+
 [node name="Level3" type="Node"]
 script = ExtResource("1_bjfvy")
 
@@ -2786,7 +2806,7 @@ additionalJump = 1400.0
 position = Vector2(-187, 454)
 
 [node name="SpikeBalls" type="Node" parent="ScenesObjects/traps_objects"]
-script = ExtResource("16_bdwl3")
+script = SubResource("CSharpScript_5l8t2")
 
 [node name="SpikeBall" parent="ScenesObjects/traps_objects/SpikeBalls" instance=ExtResource("15_fya8r")]
 position = Vector2(1850, 1056)
