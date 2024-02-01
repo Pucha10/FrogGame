@@ -27,7 +27,6 @@ public partial class spike_ball : RigidBody2D
 		}
 		// xVelocity = -xVelocity;
 		// yVelocity = -yVelocity;
-		GD.Print(LinearVelocity);
 		LinearVelocity = new Vector2(xVelocity, yVelocity);
 		if (body.Name == "CharacterBody2D")
 		{
