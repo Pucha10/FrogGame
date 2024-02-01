@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dv43mbnn18elk" path="res://scenes/traps/flames.tscn" id="12_lnl46"]
 [ext_resource type="PackedScene" uid="uid://g0dr4w43cby8" path="res://scenes/traps/spike_ball.tscn" id="13_0lpup"]
 [ext_resource type="PackedScene" uid="uid://cg7e03w44kosx" path="res://scenes/traps/trampoline.tscn" id="16_5o745"]
-[ext_resource type="PackedScene" uid="uid://ccj61aoern344" path="res://scenes/traps/falling_platform.tscn" id="17_mi5vf"]
+[ext_resource type="PackedScene" uid="uid://b1p07qpx57oae" path="res://scenes/traps/falling_platform.tscn" id="17_mi5vf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sin3s"]
 texture = ExtResource("5_tdbr2")
@@ -2660,9 +2660,10 @@ yVelocity = 500.0
 
 [node name="Trampoline" parent="ScenesObjects/traps_objects" instance=ExtResource("16_5o745")]
 position = Vector2(701, 493)
-additionalJump = 2000.0
+additionalJump = 1500.0
 
 [node name="FallingPlatform" parent="ScenesObjects/traps_objects" instance=ExtResource("17_mi5vf")]
+position = Vector2(531, 413)
 
 [node name="UI" parent="." instance=ExtResource("11_lcsh2")]
 unique_name_in_owner = true

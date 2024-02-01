@@ -1,34 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccj61aoern344"]
+[gd_scene load_steps=9 format=3 uid="uid://b1p07qpx57oae"]
 
 [ext_resource type="Texture2D" uid="uid://2qhra8ohsuss" path="res://level_objects_pngs/traps_pngs/Falling Platform.png" id="1_41whx"]
 [ext_resource type="Script" path="res://scripts/traps/falling_platform.cs" id="1_f3tqo"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kv1gq"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1unyk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3b0s"]
-size = Vector2(67, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgxs5"]
+size = Vector2(92, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2esrw"]
-size = Vector2(67, 10)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl4w2"]
+size = Vector2(91, 20)
 
-[sub_resource type="Animation" id="Animation_xwo6k"]
-resource_name = "shake"
-length = 1.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(20, 0), Vector2(0, 0), Vector2(20, 0), Vector2(0, 0), Vector2(20, 0), Vector2(0, 0), Vector2(20, 0), Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_kmwje"]
+[sub_resource type="Animation" id="Animation_kcd7o"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -43,35 +26,72 @@ tracks/0/keys = {
 "values": [Vector2(0, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_47m37"]
-_data = {
-"RESET": SubResource("Animation_kmwje"),
-"shake": SubResource("Animation_xwo6k")
+[sub_resource type="Animation" id="Animation_7x5na"]
+resource_name = "shake"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(20, 0), Vector2(0, 0), Vector2(20, 0), Vector2(0, 0), Vector2(20, 0), Vector2(0, 0), Vector2(20, 0), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"Fall"
+}]
 }
 
-[node name="FallingPlatform" type="RigidBody2D"]
-physics_material_override = SubResource("PhysicsMaterial_kv1gq")
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_04vmd"]
+_data = {
+"RESET": SubResource("Animation_kcd7o"),
+"shake": SubResource("Animation_7x5na")
+}
+
+[node name="FallingPlatform" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_1unyk")
 gravity_scale = 0.0
 script = ExtResource("1_f3tqo")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
 texture_filter = 1
-scale = Vector2(2.1875, 2.5)
+position = Vector2(0, 1)
+scale = Vector2(3.00781, 2.9)
 texture = ExtResource("1_41whx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_c3b0s")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_jgxs5")
 
-[node name="Player_entered" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="RigidBody2D"]
+position = Vector2(-1, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player_entered"]
-position = Vector2(-0.5, -10)
-shape = SubResource("RectangleShape2D_2esrw")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
+position = Vector2(0.5, -10)
+shape = SubResource("RectangleShape2D_sl4w2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RigidBody2D"]
 libraries = {
-"": SubResource("AnimationLibrary_47m37")
+"": SubResource("AnimationLibrary_04vmd")
 }
 
-[connection signal="body_entered" from="Player_entered" to="." method="onBodyEntered"]
+[node name="Timer" type="Timer" parent="RigidBody2D"]
+
+[connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="OnBodyEntered"]
+[connection signal="body_exited" from="RigidBody2D/Area2D" to="RigidBody2D" method="OnBodyExited"]
+[connection signal="timeout" from="RigidBody2D/Timer" to="RigidBody2D" method="OnTimerTimeout"]
