@@ -33,7 +33,6 @@ public partial class falling_platform : RigidBody2D
 	}
 	public void OnTimerTimeout()
 	{
-		GD.Print("Ready");
 		LinearVelocity = new Vector2(0, 0);
 		Position = new Vector2(0, 0);
 		collisionShape2D.Disabled = false;

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cg7e03w44kosx"]
+[gd_scene load_steps=14 format=3 uid="uid://bgj6rb82g8wsa"]
 
 [ext_resource type="Script" path="res://scripts/traps/trampoline.cs" id="1_3g1ex"]
 [ext_resource type="Texture2D" uid="uid://7trbq376rawn" path="res://level_objects_pngs/traps_pngs/trampoline/Idle.png" id="1_kdhnh"]

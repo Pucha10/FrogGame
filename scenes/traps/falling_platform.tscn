@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1p07qpx57oae"]
+[gd_scene load_steps=9 format=3 uid="uid://drknkksu404f7"]
 
-[ext_resource type="Texture2D" uid="uid://2qhra8ohsuss" path="res://level_objects_pngs/traps_pngs/Falling Platform.png" id="1_41whx"]
+[ext_resource type="Texture2D" path="res://level_objects_pngs/traps_pngs/Falling Platform.png" id="1_41whx"]
 [ext_resource type="Script" path="res://scripts/traps/falling_platform.cs" id="1_f3tqo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1unyk"]
