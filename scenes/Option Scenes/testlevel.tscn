@@ -2615,7 +2615,6 @@ layer_0/tile_data = PackedInt32Array(917498, 458755, 0, 917499, 458755, 0, 91750
 [node name="CharacterBody2D" parent="ScenesObjects" instance=ExtResource("5_6id0e")]
 unique_name_in_owner = true
 position = Vector2(24, 216)
-collision_layer = 4
 
 [node name="Camera2D" type="Camera2D" parent="ScenesObjects/CharacterBody2D"]
 position = Vector2(15, 25)
