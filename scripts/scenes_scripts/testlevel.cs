@@ -7,7 +7,7 @@ public partial class testlevel : Node
 	public override void _Ready()
 	{
 		Global.lives = 999;
-		Global.armor = 5;
+		Global.armor = 0;
 	}
 
 
