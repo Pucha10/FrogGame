@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://chvk16t7bjeud"]
+[gd_scene load_steps=25 format=3 uid="uid://chvk16t7bjeud"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_4t1e3"]
 [ext_resource type="Script" path="res://scripts/scenes_scripts/testlevel.cs" id="1_cyrsm"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://6bdxtwqvjjrt" path="res://scenes/colectable/armor.tscn" id="13_03fnt"]
 [ext_resource type="PackedScene" uid="uid://bgj6rb82g8wsa" path="res://scenes/traps/trampoline.tscn" id="16_5o745"]
 [ext_resource type="PackedScene" uid="uid://drknkksu404f7" path="res://scenes/traps/falling_platform.tscn" id="17_mi5vf"]
+[ext_resource type="PackedScene" uid="uid://c2oanhbuvc3yl" path="res://scenes/check_points.tscn" id="19_rwa6r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sin3s"]
 texture = ExtResource("5_tdbr2")
@@ -2676,6 +2677,12 @@ yVelocity = 300.0
 position = Vector2(88, 338)
 xVelocity = 200.0
 yVelocity = 600.0
+
+[node name="CheckPoints" parent="ScenesObjects" instance=ExtResource("19_rwa6r")]
+position = Vector2(903, 398)
+
+[node name="CheckPoints2" parent="ScenesObjects" instance=ExtResource("19_rwa6r")]
+position = Vector2(1213, 398)
 
 [node name="UI" parent="." instance=ExtResource("11_lcsh2")]
 unique_name_in_owner = true

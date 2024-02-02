@@ -263,9 +263,9 @@ texture_filter = 1
 position = Vector2(16.5, 14)
 scale = Vector2(2.03125, 1.875)
 sprite_frames = SubResource("SpriteFrames_4kltg")
-animation = &"hit"
+animation = &"iddle"
 autoplay = "iddle"
-frame_progress = 0.348571
+frame_progress = 0.776032
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(16, 18)
