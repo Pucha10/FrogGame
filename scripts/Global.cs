@@ -5,5 +5,6 @@ public partial class Global : Node
 {
 	public static uint lives;
 	public static uint points;
+	public static uint armor;
 
 }

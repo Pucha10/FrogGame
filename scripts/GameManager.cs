@@ -6,6 +6,7 @@ public partial class GameManager : Node
 	private Label pointsLabel;
 	private Label livesLabel;
 	private Label bananaLabel;
+	private Label armorLabel;
 	private Node2D startingPosition;
 	public int bananaCounter;
 	private CanvasLayer ui;
@@ -21,8 +22,10 @@ public partial class GameManager : Node
 		pointsLabel = ui.GetChild(0).GetChild(0) as Label;
 		livesLabel = ui.GetChild(0).GetChild(1) as Label;
 		bananaLabel = ui.GetChild(0).GetChild(2) as Label;
+		armorLabel = ui.GetChild(0).GetChild(3) as Label;
 		bananaCounter = GetNode<Node>("%BananaParent").GetChildCount();
 		hero.Transform = startingPosition.Transform;
+		armorLabel.Text = Global.armor.ToString();
 		pointsLabel.Text = Global.points.ToString();
 		livesLabel.Text = Global.lives.ToString();
 		bananaLabel.Text = bananaCounter.ToString();
@@ -45,30 +48,32 @@ public partial class GameManager : Node
 	}
 	public void DoDamage()
 	{
-		hero.Transform = startingPosition.Transform;
 		if (hero.canTakeDamage)
 		{
-			hero.canTakeDamage = false;
-			if (Global.lives == 0)
+			if (Global.armor > 0)
 			{
-				CallDeferred("endGame");
-				return;
+				hero.StartDamageCooldown();
+				Global.armor--;
+				armorLabel.Text = Global.armor.ToString();
 			}
-			hero.Velocity = new Vector2(0, 0);
-			Global.lives--;
-			livesLabel.Text = Global.lives.ToString();
-			startDamageCooldown();
+			else
+			{
+				hero.StartDamageCooldown();
+				hero.Transform = startingPosition.Transform;
+				if (Global.lives == 0)
+				{
+					CallDeferred("endGame");
+					return;
+				}
+				hero.Velocity = new Vector2(0, 0);
+				Global.lives--;
+				livesLabel.Text = Global.lives.ToString();
+			}
 		}
 
 	}
 	private void endGame()
 	{
 		GetTree().ChangeSceneToFile("res://scenes/Option Scenes/LoseScene.tscn");
-	}
-	private async void startDamageCooldown()
-	{
-		await
-		ToSignal(GetTree().CreateTimer(damageCooldown), "timeout");
-		hero.canTakeDamage = true;
 	}
 }
