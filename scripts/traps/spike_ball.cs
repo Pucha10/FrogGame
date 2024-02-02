@@ -25,9 +25,10 @@ public partial class spike_ball : RigidBody2D
 		{
 			yVelocity = -yVelocity;
 		}
-		// xVelocity = -xVelocity;
-		// yVelocity = -yVelocity;
 		LinearVelocity = new Vector2(xVelocity, yVelocity);
+	}
+	public void OnDamageArenaBodyEntered(Node2D body)
+	{
 		if (body.Name == "CharacterBody2D")
 		{
 			gameManager.DoDamage();

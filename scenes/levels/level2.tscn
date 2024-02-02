@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://rxmbghf3x61" path="res://scenes/colectable/cherries.tscn" id="7_6xfhb"]
 [ext_resource type="PackedScene" uid="uid://c2k32xuoh24h" path="res://scenes/colectable/banana.tscn" id="8_nw4d5"]
 [ext_resource type="PackedScene" uid="uid://cwtkq8gp80uh4" path="res://scenes/colectable/endLevel.tscn" id="9_sa7lp"]
-[ext_resource type="PackedScene" uid="uid://n1y6dih0lpu6" path="res://scenes/Option Scenes/MainMenu.tscn" id="10_s2y3g"]
+[ext_resource type="PackedScene" uid="uid://c0wy5tjn3te4p" path="res://scenes/levels/level3.tscn" id="11_bdd07"]
 [ext_resource type="PackedScene" uid="uid://1clmtym25y5j" path="res://scenes/traps/spikes.tscn" id="11_yswon"]
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/Option Scenes/ui.tscn" id="12_t5ot4"]
 
@@ -2650,7 +2650,7 @@ position = Vector2(2520, 1084)
 
 [node name="EndLevel" parent="ScenesObjects/CollectableItems" node_paths=PackedStringArray("gameManager") instance=ExtResource("9_sa7lp")]
 position = Vector2(1612, 1065)
-targetLevel = ExtResource("10_s2y3g")
+targetLevel = ExtResource("11_bdd07")
 gameManager = NodePath("../../../GameManager")
 
 [node name="traps_objects" type="Node" parent="ScenesObjects"]

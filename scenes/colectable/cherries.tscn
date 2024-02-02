@@ -134,6 +134,7 @@ animations = [{
 radius = 23.0
 
 [node name="Cherries" type="Area2D"]
+collision_mask = 5
 script = ExtResource("1_dh385")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
