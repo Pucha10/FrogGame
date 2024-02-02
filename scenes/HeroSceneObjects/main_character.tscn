@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/main_character.cs" id="1_1kvr4"]
 [ext_resource type="Texture2D" uid="uid://cn6npka7drjgx" path="res://character_pngs/Jump (32x32).png" id="1_5rxo8"]
-[ext_resource type="Texture2D" uid="uid://bh5ialac7glua" path="res://character_pngs/Hit (32x32).png" id="2_jkpuj"]
+[ext_resource type="Texture2D" path="res://character_pngs/Hit (32x32).png" id="2_jkpuj"]
 [ext_resource type="Texture2D" uid="uid://c81g0fkiphker" path="res://character_pngs/Idle (32x32).png" id="2_qemxl"]
 [ext_resource type="Texture2D" uid="uid://x243js5jmck3" path="res://character_pngs/Run (32x32).png" id="4_mae4o"]
 

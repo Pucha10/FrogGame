@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://c2oanhbuvc3yl"]
+[gd_scene load_steps=44 format=3 uid="uid://8lfg7lmi45ly"]
 
 [ext_resource type="Texture2D" uid="uid://cuvd3dn6e3g3r" path="res://level_objects_pngs/Checkpoints_pngs/Checkpoint (Flag Idle)(64x64).png" id="1_24bqw"]
 [ext_resource type="Script" path="res://scripts/check_points.cs" id="1_l7v05"]

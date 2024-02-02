@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://6bdxtwqvjjrt"]
+[gd_scene load_steps=7 format=3 uid="uid://bxmrabqx7vob0"]
 
-[ext_resource type="Texture2D" uid="uid://hck3yo3a0t60" path="res://level_objects_pngs/UIs/shield.png" id="1_ktvxd"]
+[ext_resource type="Texture2D" path="res://level_objects_pngs/UIs/shield.png" id="1_ktvxd"]
 [ext_resource type="Script" path="res://scripts/colectable/armor.cs" id="1_lcie5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4q3af"]
