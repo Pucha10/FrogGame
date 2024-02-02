@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://1clmtym25y5j" path="res://scenes/traps/spikes.tscn" id="8_wkuvj"]
 [ext_resource type="PackedScene" uid="uid://c2k32xuoh24h" path="res://scenes/colectable/banana.tscn" id="9_chj44"]
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/Option Scenes/ui.tscn" id="10_jxbjh"]
-[ext_resource type="PackedScene" path="res://scenes/colectable/armor.tscn" id="11_kcuse"]
-[ext_resource type="PackedScene" path="res://scenes/check_points.tscn" id="13_4bfrn"]
+[ext_resource type="PackedScene" uid="uid://bxmrabqx7vob0" path="res://scenes/colectable/armor.tscn" id="11_kcuse"]
+[ext_resource type="PackedScene" uid="uid://8lfg7lmi45ly" path="res://scenes/check_points.tscn" id="13_4bfrn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40lp8"]
 texture = ExtResource("3_qdwys")
