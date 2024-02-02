@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ca5cfncm3p2op"]
+[gd_scene load_steps=23 format=3 uid="uid://ca5cfncm3p2op"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_h55nv"]
 [ext_resource type="PackedScene" uid="uid://b2rno8e2kxpfw" path="res://scenes/HeroSceneObjects/starting_position.tscn" id="2_in3iv"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bw6kkp6wsepxl" path="res://scenes/HeroSceneObjects/main_character.tscn" id="7_1u2e4"]
 [ext_resource type="PackedScene" uid="uid://rxmbghf3x61" path="res://scenes/colectable/cherries.tscn" id="8_y0pmm"]
 [ext_resource type="PackedScene" uid="uid://c2k32xuoh24h" path="res://scenes/colectable/banana.tscn" id="9_pc247"]
+[ext_resource type="PackedScene" uid="uid://6bdxtwqvjjrt" path="res://scenes/colectable/armor.tscn" id="10_1mj06"]
 [ext_resource type="PackedScene" uid="uid://bgj6rb82g8wsa" path="res://scenes/traps/trampoline.tscn" id="10_1naqq"]
 [ext_resource type="PackedScene" uid="uid://cwtkq8gp80uh4" path="res://scenes/colectable/endLevel.tscn" id="10_feg5p"]
 [ext_resource type="PackedScene" uid="uid://drknkksu404f7" path="res://scenes/traps/falling_platform.tscn" id="11_msu7l"]
@@ -16,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://1clmtym25y5j" path="res://scenes/traps/spikes.tscn" id="12_3sloj"]
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/Option Scenes/ui.tscn" id="13_48nww"]
 [ext_resource type="PackedScene" uid="uid://g0dr4w43cby8" path="res://scenes/traps/spike_ball.tscn" id="15_fya8r"]
+[ext_resource type="PackedScene" uid="uid://c2oanhbuvc3yl" path="res://scenes/check_points.tscn" id="17_8etst"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40lp8"]
 texture = ExtResource("4_lvxw7")
@@ -2771,6 +2773,14 @@ position = Vector2(4875, 388)
 [node name="Banana8" parent="ScenesObjects/CollectableItems/BananaParent" instance=ExtResource("9_pc247")]
 position = Vector2(1040, 269)
 
+[node name="ArmorParrent" type="Node" parent="ScenesObjects/CollectableItems"]
+
+[node name="Armor" parent="ScenesObjects/CollectableItems/ArmorParrent" instance=ExtResource("10_1mj06")]
+position = Vector2(51, 1176)
+
+[node name="Armor2" parent="ScenesObjects/CollectableItems/ArmorParrent" instance=ExtResource("10_1mj06")]
+position = Vector2(5345, 1282)
+
 [node name="EndLevel" parent="ScenesObjects/CollectableItems" node_paths=PackedStringArray("gameManager") instance=ExtResource("10_feg5p")]
 position = Vector2(-415, 767)
 targetLevel = ExtResource("11_uv7o6")
@@ -3115,6 +3125,14 @@ xVelocity = 300.0
 [node name="SpikeBall16" parent="ScenesObjects/traps_objects/SpikeBalls" instance=ExtResource("15_fya8r")]
 position = Vector2(4775, 144)
 xVelocity = 520.0
+
+[node name="checkpoints" type="Node" parent="ScenesObjects"]
+
+[node name="CheckPoints" parent="ScenesObjects/checkpoints" instance=ExtResource("17_8etst")]
+position = Vector2(2584, 1070)
+
+[node name="CheckPoints2" parent="ScenesObjects/checkpoints" instance=ExtResource("17_8etst")]
+position = Vector2(3449, -127)
 
 [node name="UI" parent="." instance=ExtResource("13_48nww")]
 unique_name_in_owner = true

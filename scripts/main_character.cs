@@ -16,7 +16,7 @@ public partial class main_character : CharacterBody2D
 	public bool canTakeDamage = true;
 	private AnimatedSprite2D animatedSprite2D;
 	private Node2D startingPosition;
-
+	public Timer timer;
 
 
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
@@ -24,27 +24,32 @@ public partial class main_character : CharacterBody2D
 	{
 		animatedSprite2D = GetNode<AnimatedSprite2D>("%Sprite2D");
 		startingPosition = GetParent().GetNode<Node2D>("%StartingPosition");
+		timer = GetChild<Timer>(3);
 		position = startingPosition.Transform;
 
 	}
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
-		if (velocity.X != 0)
+		if (velocity.X != 0 && canTakeDamage)
 		{
 			animatedSprite2D.Animation = "running";
 		}
-		else
+		else if (canTakeDamage)
 		{
 			animatedSprite2D.Animation = "iddle";
 		}
+
 		// Add the gravity.
 		if (!IsOnFloor())
 		{
 			velocity.Y += gravity * (float)delta;
-			animatedSprite2D.Animation = "jumping";
-		}
+			if (canTakeDamage)
+			{
+				animatedSprite2D.Animation = "jumping";
 
+			}
+		}
 		// Handle Jump.
 		if (Input.IsActionJustPressed("jump") && IsOnFloor())
 			velocity.Y = JumpVelocity;
@@ -96,5 +101,14 @@ public partial class main_character : CharacterBody2D
 		additionalSlize = 0;
 		additionalSpeed = 0;
 	}
-
+	public void StartDamageCooldown()
+	{
+		timer.Start();
+		canTakeDamage = false;
+		animatedSprite2D.Play("hit");
+	}
+	public void OnTimeout()
+	{
+		canTakeDamage = true;
+	}
 }

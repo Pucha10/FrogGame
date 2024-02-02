@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c37waf0wqdyac"]
+[gd_scene load_steps=20 format=3 uid="uid://c37waf0wqdyac"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_ggx7n"]
 [ext_resource type="PackedScene" uid="uid://b2rno8e2kxpfw" path="res://scenes/HeroSceneObjects/starting_position.tscn" id="2_4jth2"]
@@ -10,9 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://rxmbghf3x61" path="res://scenes/colectable/cherries.tscn" id="7_6xfhb"]
 [ext_resource type="PackedScene" uid="uid://c2k32xuoh24h" path="res://scenes/colectable/banana.tscn" id="8_nw4d5"]
 [ext_resource type="PackedScene" uid="uid://cwtkq8gp80uh4" path="res://scenes/colectable/endLevel.tscn" id="9_sa7lp"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level3.tscn" id="11_bdd07"]
+[ext_resource type="PackedScene" uid="uid://6bdxtwqvjjrt" path="res://scenes/colectable/armor.tscn" id="10_phy0j"]
+[ext_resource type="PackedScene" uid="uid://ca5cfncm3p2op" path="res://scenes/levels/level3.tscn" id="11_bdd07"]
 [ext_resource type="PackedScene" uid="uid://1clmtym25y5j" path="res://scenes/traps/spikes.tscn" id="11_yswon"]
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/Option Scenes/ui.tscn" id="12_t5ot4"]
+[ext_resource type="PackedScene" uid="uid://c2oanhbuvc3yl" path="res://scenes/check_points.tscn" id="14_tr4fa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40lp8"]
 texture = ExtResource("4_0hriv")
@@ -2606,6 +2608,15 @@ position = Vector2(1318, 793)
 [node name="Cherries4" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("7_6xfhb")]
 position = Vector2(984, 388)
 
+[node name="Cherries12" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("7_6xfhb")]
+position = Vector2(1721, 22)
+
+[node name="Cherries13" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("7_6xfhb")]
+position = Vector2(1514, 115)
+
+[node name="Cherries14" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("7_6xfhb")]
+position = Vector2(1238, 205)
+
 [node name="Cherries5" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("7_6xfhb")]
 position = Vector2(1704, 791)
 
@@ -2633,9 +2644,6 @@ unique_name_in_owner = true
 [node name="Banana" parent="ScenesObjects/CollectableItems/BananaParent" instance=ExtResource("8_nw4d5")]
 position = Vector2(551, 510)
 
-[node name="Banana2" parent="ScenesObjects/CollectableItems/BananaParent" instance=ExtResource("8_nw4d5")]
-position = Vector2(1705, 32)
-
 [node name="Banana3" parent="ScenesObjects/CollectableItems/BananaParent" instance=ExtResource("8_nw4d5")]
 position = Vector2(3720, 409)
 
@@ -2647,6 +2655,11 @@ position = Vector2(2472, 796)
 
 [node name="Banana6" parent="ScenesObjects/CollectableItems/BananaParent" instance=ExtResource("8_nw4d5")]
 position = Vector2(2520, 1084)
+
+[node name="ArmorParrent" type="Node" parent="ScenesObjects/CollectableItems"]
+
+[node name="Armor" parent="ScenesObjects/CollectableItems/ArmorParrent" instance=ExtResource("10_phy0j")]
+position = Vector2(1932, 119)
 
 [node name="EndLevel" parent="ScenesObjects/CollectableItems" node_paths=PackedStringArray("gameManager") instance=ExtResource("9_sa7lp")]
 position = Vector2(1612, 1065)
@@ -2843,6 +2856,11 @@ rotation = 3.14159
 [node name="Spikes27" parent="ScenesObjects/traps_objects" instance=ExtResource("11_yswon")]
 position = Vector2(2603, 347)
 rotation = 1.5708
+
+[node name="checkpoints" type="Node" parent="ScenesObjects"]
+
+[node name="CheckPoints" parent="ScenesObjects/checkpoints" instance=ExtResource("14_tr4fa")]
+position = Vector2(1877, 350)
 
 [node name="UI" parent="." instance=ExtResource("12_t5ot4")]
 unique_name_in_owner = true

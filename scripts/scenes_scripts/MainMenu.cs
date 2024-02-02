@@ -7,6 +7,7 @@ public partial class MainMenu : Node
 	{
 		Global.lives = 3;
 		Global.points = 0;
+		Global.armor = 0;
 	}
 	public void onButtonPressed1()
 	{
