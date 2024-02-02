@@ -2663,5 +2663,9 @@ unique_name_in_owner = true
 position = Vector2(328, 345)
 xVelocity = 500.0
 
+[node name="SpikeBall3" parent="ScenesObjects/traps_objects/SpikeBalls" instance=ExtResource("13_0lpup")]
+position = Vector2(88, 338)
+xVelocity = 500.0
+
 [node name="UI" parent="." instance=ExtResource("11_lcsh2")]
 unique_name_in_owner = true

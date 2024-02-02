@@ -61,6 +61,7 @@ size = Vector2(37.5, 45)
 size = Vector2(53.25, 43.25)
 
 [node name="Flames" type="Area2D"]
+collision_mask = 5
 script = ExtResource("1_78t2k")
 
 [node name="FlamesAnimation" type="AnimatedSprite2D" parent="."]

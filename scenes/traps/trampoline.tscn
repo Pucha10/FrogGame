@@ -89,6 +89,7 @@ animations = [{
 size = Vector2(51, 8)
 
 [node name="Trampoline" type="Area2D"]
+collision_mask = 5
 script = ExtResource("1_3g1ex")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
