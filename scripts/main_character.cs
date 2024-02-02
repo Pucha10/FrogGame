@@ -110,6 +110,5 @@ public partial class main_character : CharacterBody2D
 	public void OnTimeout()
 	{
 		canTakeDamage = true;
-		GD.Print(JumpVelocity);
 	}
 }

@@ -265,7 +265,7 @@ scale = Vector2(2.03125, 1.875)
 sprite_frames = SubResource("SpriteFrames_4kltg")
 animation = &"hit"
 autoplay = "iddle"
-frame_progress = 0.304008
+frame_progress = 0.348571
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(16, 18)
@@ -278,6 +278,7 @@ position = Vector2(15.5, 19)
 shape = SubResource("RectangleShape2D_hyuew")
 
 [node name="PlayerHit" type="Timer" parent="."]
+wait_time = 1.2
 
 [connection signal="body_entered" from="TileSetDetector" to="." method="onTileSetDetectorBodyEntered"]
 [connection signal="body_exited" from="TileSetDetector" to="." method="onTileSetDetectorBodyExit"]

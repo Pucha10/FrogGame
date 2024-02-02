@@ -41,10 +41,15 @@ public partial class GameManager : Node
 		}
 		pointsLabel.Text = Global.points.ToString();
 	}
-	public void decreaseBananaCount()
+	public void DecreaseBananaCount()
 	{
 		bananaCounter--;
 		bananaLabel.Text = bananaCounter.ToString();
+	}
+	public void AddArmor()
+	{
+		Global.armor++;
+		armorLabel.Text = Global.armor.ToString();
 	}
 	public void DoDamage()
 	{
@@ -58,21 +63,24 @@ public partial class GameManager : Node
 			}
 			else
 			{
-				hero.StartDamageCooldown();
-				hero.Transform = startingPosition.Transform;
-				if (Global.lives == 0)
-				{
-					CallDeferred("endGame");
-					return;
-				}
-				hero.Velocity = new Vector2(0, 0);
-				Global.lives--;
-				livesLabel.Text = Global.lives.ToString();
+				DoLiveDamage();
 			}
 		}
-
 	}
-	private void endGame()
+	public void DoLiveDamage()
+	{
+		hero.StartDamageCooldown();
+		hero.Transform = startingPosition.Transform;
+		if (Global.lives == 0)
+		{
+			CallDeferred("EndGame");
+			return;
+		}
+		hero.Velocity = new Vector2(0, 0);
+		Global.lives--;
+		livesLabel.Text = Global.lives.ToString();
+	}
+	private void EndGame()
 	{
 		GetTree().ChangeSceneToFile("res://scenes/Option Scenes/LoseScene.tscn");
 	}

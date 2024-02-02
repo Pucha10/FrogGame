@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class banana : Node
+public partial class armor : Area2D
 {
 	private GameManager gameManager;
 	public override void _Ready()
@@ -13,7 +13,9 @@ public partial class banana : Node
 		if (body.Name == "CharacterBody2D")
 		{
 			QueueFree();
-			gameManager.DecreaseBananaCount();
+			gameManager.AddArmor();
 		}
 	}
+
 }
+

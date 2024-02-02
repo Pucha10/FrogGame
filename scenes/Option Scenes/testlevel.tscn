@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://chvk16t7bjeud"]
+[gd_scene load_steps=24 format=3 uid="uid://chvk16t7bjeud"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_4t1e3"]
 [ext_resource type="Script" path="res://scripts/scenes_scripts/testlevel.cs" id="1_cyrsm"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/Option Scenes/ui.tscn" id="11_lcsh2"]
 [ext_resource type="PackedScene" uid="uid://dv43mbnn18elk" path="res://scenes/traps/flames.tscn" id="12_lnl46"]
 [ext_resource type="PackedScene" uid="uid://g0dr4w43cby8" path="res://scenes/traps/spike_ball.tscn" id="13_0lpup"]
+[ext_resource type="PackedScene" uid="uid://6bdxtwqvjjrt" path="res://scenes/colectable/armor.tscn" id="13_03fnt"]
 [ext_resource type="PackedScene" uid="uid://bgj6rb82g8wsa" path="res://scenes/traps/trampoline.tscn" id="16_5o745"]
 [ext_resource type="PackedScene" uid="uid://drknkksu404f7" path="res://scenes/traps/falling_platform.tscn" id="17_mi5vf"]
 
@@ -2638,6 +2639,11 @@ unique_name_in_owner = true
 
 [node name="Banana" parent="ScenesObjects/CollectableItems/BananaParent" instance=ExtResource("9_ybfbp")]
 position = Vector2(1366, 456)
+
+[node name="ArmorParrent" type="Node" parent="ScenesObjects/CollectableItems"]
+
+[node name="Armor" parent="ScenesObjects/CollectableItems/ArmorParrent" instance=ExtResource("13_03fnt")]
+position = Vector2(435, 460)
 
 [node name="traps_objects" type="Node" parent="ScenesObjects"]
 
