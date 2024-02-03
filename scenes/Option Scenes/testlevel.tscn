@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://chvk16t7bjeud"]
+[gd_scene load_steps=28 format=3 uid="uid://chvk16t7bjeud"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_4t1e3"]
 [ext_resource type="Script" path="res://scripts/scenes_scripts/testlevel.cs" id="1_cyrsm"]
@@ -19,9 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://bxmrabqx7vob0" path="res://scenes/colectable/armor.tscn" id="13_03fnt"]
 [ext_resource type="PackedScene" uid="uid://bgj6rb82g8wsa" path="res://scenes/traps/trampoline.tscn" id="16_5o745"]
 [ext_resource type="PackedScene" uid="uid://drknkksu404f7" path="res://scenes/traps/falling_platform.tscn" id="17_mi5vf"]
-[ext_resource type="PackedScene" path="res://scenes/traps/lever.tscn" id="17_q2dfh"]
-[ext_resource type="PackedScene" path="res://scenes/traps/saw.tscn" id="19_r5gl0"]
-[ext_resource type="PackedScene" uid="uid://8lfg7lmi45ly" path="res://scenes/check_points.tscn" id="19_rwa6r"]
+[ext_resource type="PackedScene" uid="uid://d1uaop71kjxcp" path="res://scenes/traps/lever.tscn" id="17_q2dfh"]
+[ext_resource type="PackedScene" uid="uid://6j4j6dg4xdfp" path="res://scenes/enemies/plant/plant.tscn" id="19_nev13"]
+[ext_resource type="PackedScene" uid="uid://bdt7g6sq0fbhe" path="res://scenes/traps/saw.tscn" id="19_r5gl0"]
+[ext_resource type="PackedScene" uid="uid://8lfg7lmi45ly" path="res://scenes/HeroSceneObjects/check_points.tscn" id="19_rwa6r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sin3s"]
 texture = ExtResource("5_tdbr2")
@@ -2609,7 +2610,7 @@ stretch_mode = 1
 
 [node name="CharacterBody2D" parent="ScenesObjects" instance=ExtResource("5_6id0e")]
 unique_name_in_owner = true
-position = Vector2(24, 216)
+position = Vector2(1462, 436)
 
 [node name="Camera2D" type="Camera2D" parent="ScenesObjects/CharacterBody2D"]
 position = Vector2(15, 25)
@@ -2641,11 +2642,8 @@ position = Vector2(435, 460)
 
 [node name="traps_objects" type="Node" parent="ScenesObjects"]
 
-[node name="Spikes" parent="ScenesObjects/traps_objects" instance=ExtResource("10_i1co1")]
-position = Vector2(634, 611)
-
 [node name="Spikes2" parent="ScenesObjects/traps_objects" instance=ExtResource("10_i1co1")]
-position = Vector2(579, 611)
+position = Vector2(627, 611)
 
 [node name="Flames" parent="ScenesObjects/traps_objects" instance=ExtResource("12_lnl46")]
 position = Vector2(1092, 450)
@@ -2656,20 +2654,20 @@ position = Vector2(701, 493)
 additionalJump = 1500.0
 
 [node name="FallingPlatform" parent="ScenesObjects/traps_objects" instance=ExtResource("17_mi5vf")]
-position = Vector2(531, 413)
+position = Vector2(579, 319)
 
 [node name="Saw" parent="ScenesObjects/traps_objects" instance=ExtResource("19_r5gl0")]
-position = Vector2(526, 622)
+position = Vector2(576, 624)
 timeOff = 4
 
 [node name="Lever" parent="ScenesObjects/traps_objects/Saw" instance=ExtResource("17_q2dfh")]
-position = Vector2(-77.2728, -12.8788)
+position = Vector2(-91.6667, -12.8788)
 
 [node name="Lever2" parent="ScenesObjects/traps_objects/Saw" instance=ExtResource("17_q2dfh")]
-position = Vector2(200, -82.5758)
+position = Vector2(198.485, -88.6364)
 
 [node name="Lever3" parent="ScenesObjects/traps_objects/Saw" instance=ExtResource("17_q2dfh")]
-position = Vector2(-221.97, -12.8788)
+position = Vector2(-258.333, -12.8788)
 
 [node name="SpikeBalls" type="Node" parent="ScenesObjects/traps_objects"]
 unique_name_in_owner = true
@@ -2691,6 +2689,11 @@ position = Vector2(900, 398)
 
 [node name="CheckPoints2" parent="ScenesObjects/Checkpoints" instance=ExtResource("19_rwa6r")]
 position = Vector2(1214, 400)
+
+[node name="Enemies" type="Node" parent="ScenesObjects"]
+
+[node name="AnimatedSprite2D" parent="ScenesObjects/Enemies" instance=ExtResource("19_nev13")]
+position = Vector2(1562, 441)
 
 [node name="TileMap" type="TileMap" parent="." groups=["Grass"]]
 unique_name_in_owner = true
