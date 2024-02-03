@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b1w5fjsrnp6ok"]
+[gd_scene load_steps=15 format=3 uid="uid://bdt7g6sq0fbhe"]
 
 [ext_resource type="Script" path="res://scripts/traps/saw.cs" id="1_5biwt"]
 [ext_resource type="Texture2D" uid="uid://dfdmhhxw47dsq" path="res://level_objects_pngs/traps_pngs/saw/Off.png" id="1_o3a87"]

@@ -19,8 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://bxmrabqx7vob0" path="res://scenes/colectable/armor.tscn" id="13_03fnt"]
 [ext_resource type="PackedScene" uid="uid://bgj6rb82g8wsa" path="res://scenes/traps/trampoline.tscn" id="16_5o745"]
 [ext_resource type="PackedScene" uid="uid://drknkksu404f7" path="res://scenes/traps/falling_platform.tscn" id="17_mi5vf"]
-[ext_resource type="PackedScene" uid="uid://d0rr6dd1jn18f" path="res://scenes/traps/lever.tscn" id="17_q2dfh"]
-[ext_resource type="PackedScene" uid="uid://b1w5fjsrnp6ok" path="res://scenes/traps/saw.tscn" id="19_r5gl0"]
+[ext_resource type="PackedScene" path="res://scenes/traps/lever.tscn" id="17_q2dfh"]
+[ext_resource type="PackedScene" path="res://scenes/traps/saw.tscn" id="19_r5gl0"]
 [ext_resource type="PackedScene" uid="uid://8lfg7lmi45ly" path="res://scenes/check_points.tscn" id="19_rwa6r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sin3s"]

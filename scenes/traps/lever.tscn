@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0rr6dd1jn18f"]
+[gd_scene load_steps=8 format=3 uid="uid://d1uaop71kjxcp"]
 
 [ext_resource type="Script" path="res://scripts/traps/lever.cs" id="1_1vxys"]
 [ext_resource type="Texture2D" uid="uid://pgn8xr8jh27r" path="res://level_objects_pngs/traps_pngs/saw/lever off.png" id="1_t4fe4"]
