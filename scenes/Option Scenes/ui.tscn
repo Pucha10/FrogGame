@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://hrvebec7hx5v"]
 
 [ext_resource type="Texture2D" uid="uid://bwjhtlcqjd256" path="res://character_pngs/Fall (32x32).png" id="1_hxqk6"]
-[ext_resource type="Texture2D" path="res://level_objects_pngs/UIs/shield.png" id="2_5dwmu"]
+[ext_resource type="Texture2D" uid="uid://hck3yo3a0t60" path="res://level_objects_pngs/UIs/shield.png" id="2_5dwmu"]
 [ext_resource type="Texture2D" uid="uid://5x380kj4kh0o" path="res://level_objects_pngs/UIs/cherry.png" id="2_btpnb"]
 [ext_resource type="Texture2D" uid="uid://k4jhpg7kvcgg" path="res://level_objects_pngs/UIs/zapis.png" id="3_q62em"]
 

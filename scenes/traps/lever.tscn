@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0rr6dd1jn18f"]
+
+[ext_resource type="Script" path="res://scripts/traps/lever.cs" id="1_1vxys"]
+[ext_resource type="Texture2D" uid="uid://pgn8xr8jh27r" path="res://level_objects_pngs/traps_pngs/saw/lever off.png" id="1_t4fe4"]
+[ext_resource type="Texture2D" uid="uid://balcjqtlh28tk" path="res://level_objects_pngs/traps_pngs/saw/lever on.png" id="2_kpwlw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hqhy"]
+atlas = ExtResource("1_t4fe4")
+region = Rect2(0, 0, 284, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tavtd"]
+atlas = ExtResource("2_kpwlw")
+region = Rect2(0, 0, 392, 235)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wlrg0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hqhy")
+}],
+"loop": true,
+"name": &"Off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tavtd")
+}],
+"loop": false,
+"name": &"On",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hq8re"]
+size = Vector2(32, 42)
+
+[node name="Lever" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_1vxys")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 4.76837e-07)
+scale = Vector2(0.129122, 0.129122)
+sprite_frames = SubResource("SpriteFrames_wlrg0")
+animation = &"Off"
+autoplay = "Off"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_hq8re")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
