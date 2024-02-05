@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://bfs3brqarouq7"]
+
+[ext_resource type="Texture2D" uid="uid://ct55k46gy3ncl" path="res://level_objects_pngs/enemies pngs/plant/Bullet Pieces.png" id="1_6pl14"]
+[ext_resource type="Script" path="res://scripts/enemies/plant/Bullet.cs" id="1_evvn1"]
+[ext_resource type="Texture2D" uid="uid://bd0pkll183pke" path="res://level_objects_pngs/enemies pngs/plant/Bullet.png" id="2_atk25"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fy1q7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whk22"]
+atlas = ExtResource("1_6pl14")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg8md"]
+atlas = ExtResource("1_6pl14")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7psdc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whk22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sg8md")
+}],
+"loop": false,
+"name": &"Destroy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_atk25")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_108jr"]
+radius = 14.0174
+
+[node name="Bullet" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_fy1q7")
+gravity_scale = 0.0
+script = ExtResource("1_evvn1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.24347, 2.24347)
+sprite_frames = SubResource("SpriteFrames_7psdc")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.642058, 0.642058)
+shape = SubResource("CircleShape2D_108jr")
+
+[node name="DamageArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+scale = Vector2(0.642058, 0.642058)
+shape = SubResource("CircleShape2D_108jr")
+
+[connection signal="body_entered" from="DamageArea" to="." method="OnDamageAreaBodyEntered"]

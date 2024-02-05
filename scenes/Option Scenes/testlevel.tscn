@@ -2693,7 +2693,7 @@ position = Vector2(1214, 400)
 [node name="Enemies" type="Node" parent="ScenesObjects"]
 
 [node name="AnimatedSprite2D" parent="ScenesObjects/Enemies" instance=ExtResource("19_nev13")]
-position = Vector2(1562, 441)
+position = Vector2(1576, 436)
 
 [node name="TileMap" type="TileMap" parent="." groups=["Grass"]]
 unique_name_in_owner = true

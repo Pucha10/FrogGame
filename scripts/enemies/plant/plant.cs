@@ -6,11 +6,13 @@ public partial class plant : AnimatedSprite2D
 {
 	private GameManager gameManager;
 	private bool isPlayerOnTriggerArea = false;
-
+	private Node2D bulletRespawn;
+	[Export]
+	public PackedScene bullet;
 	public override void _Ready()
 	{
 		gameManager = GetNode<GameManager>("%GameManager");
-
+		bulletRespawn = GetChild<Node2D>(4);
 	}
 	public override void _Process(double delta)
 	{
@@ -18,7 +20,6 @@ public partial class plant : AnimatedSprite2D
 		{
 			Play("Attack");
 		}
-		GD.Print(isPlayerOnTriggerArea);
 	}
 	public void OnLeftTriggerAreaBodyEntered(Node2D body)
 	{
@@ -26,21 +27,13 @@ public partial class plant : AnimatedSprite2D
 	}
 	public void OnRightTriggerAreaBodyEntered(Node2D body)
 	{
-		isPlayerOnTriggerArea = true;
-		if (Transform.Scale.X > 0)
-		{
-			Scale = new Vector2(-Scale.X, Scale.Y);
-		}
+		Scale = new Vector2(-Scale.X, Scale.Y);
 	}
 	public void OnLeftTriggerAreaBodyExited(Node2D body)
 	{
 		isPlayerOnTriggerArea = false;
+	}
 
-	}
-	public void OnRightTriggerAreaBodyExited(Node2D body)
-	{
-		isPlayerOnTriggerArea = false;
-	}
 	public void OnHitAreaBodyEntered(CharacterBody2D body)
 	{
 		if (body.Velocity.Y > 0)
@@ -63,9 +56,22 @@ public partial class plant : AnimatedSprite2D
 		}
 		if (Animation == "Attack")
 		{
+			respawnBullet();
 			Play("Iddle");
 		}
 	}
-
-
+	private void respawnBullet()
+	{
+		Bullet newBullet = bullet.Instantiate<Bullet>();
+		newBullet.gameManager = gameManager;
+		if (Scale.X > 0)
+		{
+			newBullet.isLeft = true;
+		}
+		else
+		{
+			newBullet.isLeft = false;
+		}
+		bulletRespawn.AddChild(newBullet);
+	}
 }

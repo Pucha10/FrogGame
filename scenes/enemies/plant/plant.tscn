@@ -1,9 +1,10 @@
-[gd_scene load_steps=32 format=3 uid="uid://6j4j6dg4xdfp"]
+[gd_scene load_steps=33 format=3 uid="uid://6j4j6dg4xdfp"]
 
 [ext_resource type="Texture2D" uid="uid://cu70dj75v8tkw" path="res://level_objects_pngs/enemies pngs/plant/Attack (44x42).png" id="1_117yb"]
 [ext_resource type="Script" path="res://scripts/enemies/plant/plant.cs" id="1_ehn4k"]
 [ext_resource type="Texture2D" uid="uid://cd8ktwu7h1qwc" path="res://level_objects_pngs/enemies pngs/plant/Hit (44x42).png" id="2_irrdg"]
 [ext_resource type="Texture2D" uid="uid://cljtpeevu3kiq" path="res://level_objects_pngs/enemies pngs/plant/Idle (44x42).png" id="3_wynox"]
+[ext_resource type="PackedScene" uid="uid://bfs3brqarouq7" path="res://scenes/enemies/plant/bullet.tscn" id="5_7no6m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w18en"]
 atlas = ExtResource("1_117yb")
@@ -185,7 +186,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ryook"]
-size = Vector2(631.438, 20)
+size = Vector2(631.936, 12.3103)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2sfj"]
 size = Vector2(16.4763, 3.52372)
@@ -194,11 +195,14 @@ size = Vector2(16.4763, 3.52372)
 size = Vector2(17.1239, 16.7931)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(-5, -9)
 scale = Vector2(2.101, 2.101)
 sprite_frames = SubResource("SpriteFrames_mfx6x")
 animation = &"Attack"
 autoplay = "Iddle"
+speed_scale = 0.9
 script = ExtResource("1_ehn4k")
+bullet = ExtResource("5_7no6m")
 
 [node name="RightTriggerArea" type="Area2D" parent="."]
 scale = Vector2(1.5441, 1.5441)
@@ -215,7 +219,7 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="LeftColisionShape" type="CollisionShape2D" parent="LeftTriggerArea"]
-position = Vector2(-326.081, 3.23814)
+position = Vector2(-325.832, -0.606701)
 shape = SubResource("RectangleShape2D_ryook")
 
 [node name="HitArea" type="Area2D" parent="."]
@@ -236,9 +240,11 @@ collision_mask = 4
 position = Vector2(1.29526, 4.51077)
 shape = SubResource("RectangleShape2D_r5ggl")
 
+[node name="BulletRespawn" type="Node2D" parent="."]
+position = Vector2(-11.8991, -4.75964)
+
 [connection signal="animation_finished" from="." to="." method="OnAnimationFinished"]
 [connection signal="body_entered" from="RightTriggerArea" to="." method="OnRightTriggerAreaBodyEntered"]
-[connection signal="body_exited" from="RightTriggerArea" to="." method="OnRightTriggerAreaBodyExited"]
 [connection signal="body_entered" from="LeftTriggerArea" to="." method="OnLeftTriggerAreaBodyEntered"]
 [connection signal="body_exited" from="LeftTriggerArea" to="." method="OnLeftTriggerAreaBodyExited"]
 [connection signal="body_entered" from="HitArea" to="." method="OnHitAreaBodyEntered"]
