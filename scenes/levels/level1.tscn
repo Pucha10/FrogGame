@@ -2519,7 +2519,7 @@ position = Vector2(2360, 161)
 
 [node name="Enemies" type="Node" parent="ScenesObjects"]
 
-[node name="AnimatedSprite2D" parent="ScenesObjects/Enemies" instance=ExtResource("12_w7rpd")]
+[node name="Plant" parent="ScenesObjects/Enemies" instance=ExtResource("12_w7rpd")]
 position = Vector2(2095, 294)
 
 [node name="TileMap" type="TileMap" parent="."]
