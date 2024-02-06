@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bgj6rb82g8wsa" path="res://scenes/traps/trampoline.tscn" id="10_1naqq"]
 [ext_resource type="PackedScene" uid="uid://cwtkq8gp80uh4" path="res://scenes/colectable/endLevel.tscn" id="10_feg5p"]
 [ext_resource type="PackedScene" uid="uid://drknkksu404f7" path="res://scenes/traps/falling_platform.tscn" id="11_msu7l"]
-[ext_resource type="PackedScene" uid="uid://n1y6dih0lpu6" path="res://scenes/Option Scenes/MainMenu.tscn" id="11_uv7o6"]
 [ext_resource type="PackedScene" uid="uid://1clmtym25y5j" path="res://scenes/traps/spikes.tscn" id="12_3sloj"]
+[ext_resource type="PackedScene" uid="uid://ctsv3cvpj1mjg" path="res://scenes/levels/level4.tscn" id="12_i3ama"]
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/Option Scenes/ui.tscn" id="13_48nww"]
 [ext_resource type="PackedScene" uid="uid://g0dr4w43cby8" path="res://scenes/traps/spike_ball.tscn" id="15_fya8r"]
 [ext_resource type="PackedScene" uid="uid://8lfg7lmi45ly" path="res://scenes/HeroSceneObjects/check_points.tscn" id="17_8etst"]
@@ -2564,7 +2564,7 @@ hero = NodePath("../ScenesObjects/CharacterBody2D")
 
 [node name="StartingPosition" parent="ScenesObjects" instance=ExtResource("2_in3iv")]
 unique_name_in_owner = true
-position = Vector2(-177.163, 778.836)
+position = Vector2(-169.799, 771.683)
 
 [node name="TextureRect" type="TextureRect" parent="ScenesObjects"]
 texture_filter = 1
@@ -2782,7 +2782,7 @@ position = Vector2(5345, 1282)
 
 [node name="EndLevel" parent="ScenesObjects/CollectableItems" node_paths=PackedStringArray("gameManager") instance=ExtResource("10_feg5p")]
 position = Vector2(-415, 767)
-targetLevel = ExtResource("11_uv7o6")
+targetLevel = ExtResource("12_i3ama")
 gameManager = NodePath("../../../GameManager")
 
 [node name="traps_objects" type="Node" parent="ScenesObjects"]
@@ -3126,7 +3126,7 @@ xVelocity = 520.0
 
 [node name="BlueBird" parent="ScenesObjects/Enemies" instance=ExtResource("17_uqqt6")]
 position = Vector2(1951, -275)
-speed = 400.0
+speed = 600.0
 
 [node name="Plant" parent="ScenesObjects/Enemies" instance=ExtResource("19_f7ico")]
 position = Vector2(1959, 584)
