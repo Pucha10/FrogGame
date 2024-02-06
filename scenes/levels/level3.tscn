@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://ca5cfncm3p2op"]
+[gd_scene load_steps=26 format=3 uid="uid://ca5cfncm3p2op"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_h55nv"]
+[ext_resource type="Script" path="res://scripts/scenes_scripts/testlevel.cs" id="1_phwfj"]
 [ext_resource type="PackedScene" uid="uid://b2rno8e2kxpfw" path="res://scenes/HeroSceneObjects/starting_position.tscn" id="2_in3iv"]
 [ext_resource type="Texture2D" uid="uid://dix4ywi35xggv" path="res://level_objects_pngs/background colors/Green.png" id="3_vl1dp"]
 [ext_resource type="Texture2D" uid="uid://8nyiyiph2qg2" path="res://level_objects_pngs/tilesets/Terrain (16x16).png" id="4_lvxw7"]
@@ -18,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/Option Scenes/ui.tscn" id="13_48nww"]
 [ext_resource type="PackedScene" uid="uid://g0dr4w43cby8" path="res://scenes/traps/spike_ball.tscn" id="15_fya8r"]
 [ext_resource type="PackedScene" uid="uid://8lfg7lmi45ly" path="res://scenes/HeroSceneObjects/check_points.tscn" id="17_8etst"]
+[ext_resource type="PackedScene" uid="uid://8u16buy4jb3m" path="res://scenes/enemies/blue_bird.tscn" id="17_uqqt6"]
+[ext_resource type="PackedScene" uid="uid://6j4j6dg4xdfp" path="res://scenes/enemies/plant/plant.tscn" id="19_f7ico"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40lp8"]
 texture = ExtResource("4_lvxw7")
@@ -2552,6 +2555,7 @@ sources/1 = SubResource("TileSetAtlasSource_lv4t7")
 sources/2 = SubResource("TileSetAtlasSource_4p486")
 
 [node name="Level3" type="Node"]
+script = ExtResource("1_phwfj")
 
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hero")]
 unique_name_in_owner = true
@@ -2658,9 +2662,6 @@ position = Vector2(1637, 1174)
 
 [node name="Cherries14" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("8_y0pmm")]
 position = Vector2(838, 454)
-
-[node name="Cherries15" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("8_y0pmm")]
-position = Vector2(1948, 595)
 
 [node name="Cherries16" parent="ScenesObjects/CollectableItems/CherriesParent" instance=ExtResource("8_y0pmm")]
 position = Vector2(3193, 1027)
@@ -2928,9 +2929,6 @@ position = Vector2(1136, 614)
 [node name="Spikes39" parent="ScenesObjects/traps_objects/Spikes" instance=ExtResource("12_3sloj")]
 position = Vector2(1185, 614)
 
-[node name="Spikes40" parent="ScenesObjects/traps_objects/Spikes" instance=ExtResource("12_3sloj")]
-position = Vector2(1802, 613)
-
 [node name="Spikes41" parent="ScenesObjects/traps_objects/Spikes" instance=ExtResource("12_3sloj")]
 position = Vector2(2135, 855)
 
@@ -3125,6 +3123,15 @@ xVelocity = 300.0
 [node name="SpikeBall16" parent="ScenesObjects/traps_objects/SpikeBalls" instance=ExtResource("15_fya8r")]
 position = Vector2(4775, 144)
 xVelocity = 520.0
+
+[node name="Enemies" type="Node" parent="ScenesObjects"]
+
+[node name="BlueBird" parent="ScenesObjects/Enemies" instance=ExtResource("17_uqqt6")]
+position = Vector2(1951, -275)
+speed = 400.0
+
+[node name="Plant" parent="ScenesObjects/Enemies" instance=ExtResource("19_f7ico")]
+position = Vector2(1959, 584)
 
 [node name="checkpoints" type="Node" parent="ScenesObjects"]
 
