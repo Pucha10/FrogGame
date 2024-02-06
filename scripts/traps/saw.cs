@@ -14,6 +14,7 @@ public partial class saw : Area2D
 	private GameManager gameManager;
 	private Timer timer;
 	private List<lever> levers = new List<lever>();
+	public bool isStopped = false;
 
 	public override void _Ready()
 	{
@@ -33,7 +34,6 @@ public partial class saw : Area2D
 				levers.Add((lever)child);
 			}
 		}
-
 	}
 	public void SetOffAnimation()
 	{
@@ -48,6 +48,22 @@ public partial class saw : Area2D
 		if (couter == levers.Count)
 		{
 			animatedSprite2D.Animation = "Off";
+			isStopped = true;
+		}
+	}
+	public void SetOnAnimation()
+	{
+		int couter = 0;
+		foreach (lever lever in levers)
+		{
+			if (lever.isOpen)
+			{
+				couter++;
+			}
+		}
+		if (couter != levers.Count)
+		{
+			animatedSprite2D.Animation = "On";
 		}
 	}
 	public void OnBodyEntered(Node2D body)
