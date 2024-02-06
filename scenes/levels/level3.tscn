@@ -1,7 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://ca5cfncm3p2op"]
+[gd_scene load_steps=25 format=3 uid="uid://ca5cfncm3p2op"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_h55nv"]
-[ext_resource type="Script" path="res://scripts/scenes_scripts/testlevel.cs" id="1_phwfj"]
 [ext_resource type="PackedScene" uid="uid://b2rno8e2kxpfw" path="res://scenes/HeroSceneObjects/starting_position.tscn" id="2_in3iv"]
 [ext_resource type="Texture2D" uid="uid://dix4ywi35xggv" path="res://level_objects_pngs/background colors/Green.png" id="3_vl1dp"]
 [ext_resource type="Texture2D" uid="uid://8nyiyiph2qg2" path="res://level_objects_pngs/tilesets/Terrain (16x16).png" id="4_lvxw7"]
@@ -2555,7 +2554,6 @@ sources/1 = SubResource("TileSetAtlasSource_lv4t7")
 sources/2 = SubResource("TileSetAtlasSource_4p486")
 
 [node name="Level3" type="Node"]
-script = ExtResource("1_phwfj")
 
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hero")]
 unique_name_in_owner = true
