@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://1clmtym25y5j" path="res://scenes/traps/spikes.tscn" id="12_3sloj"]
 [ext_resource type="PackedScene" uid="uid://hrvebec7hx5v" path="res://scenes/Option Scenes/ui.tscn" id="13_48nww"]
 [ext_resource type="PackedScene" uid="uid://g0dr4w43cby8" path="res://scenes/traps/spike_ball.tscn" id="15_fya8r"]
-[ext_resource type="PackedScene" uid="uid://8lfg7lmi45ly" path="res://scenes/check_points.tscn" id="17_8etst"]
+[ext_resource type="PackedScene" uid="uid://8lfg7lmi45ly" path="res://scenes/HeroSceneObjects/check_points.tscn" id="17_8etst"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40lp8"]
 texture = ExtResource("4_lvxw7")
