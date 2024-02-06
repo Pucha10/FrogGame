@@ -30,9 +30,9 @@ public partial class GameManager : Node
 		livesLabel.Text = Global.lives.ToString();
 		bananaLabel.Text = bananaCounter.ToString();
 	}
-	public void AddCherriesPoints()
+	public void AddCherriesPoints(uint i)
 	{
-		Global.points += 1;
+		Global.points += i;
 		if (Global.points == 10)
 		{
 			Global.lives += 1;

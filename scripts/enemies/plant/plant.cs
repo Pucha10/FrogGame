@@ -39,6 +39,8 @@ public partial class plant : AnimatedSprite2D
 		if (body.Velocity.Y > 0)
 		{
 			Animation = "Hit";
+			body.Velocity = new Vector2(body.Velocity.X, -900);
+			gameManager.AddCherriesPoints(3);
 		}
 	}
 	public void OnDamageAreaBodyEntered(Node2D body)

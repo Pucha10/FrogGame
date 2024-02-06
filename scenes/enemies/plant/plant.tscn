@@ -200,7 +200,7 @@ scale = Vector2(2.101, 2.101)
 sprite_frames = SubResource("SpriteFrames_mfx6x")
 animation = &"Attack"
 autoplay = "Iddle"
-speed_scale = 0.9
+speed_scale = 0.8
 script = ExtResource("1_ehn4k")
 bullet = ExtResource("5_7no6m")
 
