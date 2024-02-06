@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://chvk16t7bjeud"]
+[gd_scene load_steps=29 format=3 uid="uid://chvk16t7bjeud"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.cs" id="1_4t1e3"]
 [ext_resource type="Script" path="res://scripts/scenes_scripts/testlevel.cs" id="1_cyrsm"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bgj6rb82g8wsa" path="res://scenes/traps/trampoline.tscn" id="16_5o745"]
 [ext_resource type="PackedScene" uid="uid://drknkksu404f7" path="res://scenes/traps/falling_platform.tscn" id="17_mi5vf"]
 [ext_resource type="PackedScene" uid="uid://d1uaop71kjxcp" path="res://scenes/traps/lever.tscn" id="17_q2dfh"]
+[ext_resource type="PackedScene" uid="uid://8u16buy4jb3m" path="res://scenes/enemies/blue_bird.tscn" id="19_iwi35"]
 [ext_resource type="PackedScene" uid="uid://6j4j6dg4xdfp" path="res://scenes/enemies/plant/plant.tscn" id="19_nev13"]
 [ext_resource type="PackedScene" uid="uid://bdt7g6sq0fbhe" path="res://scenes/traps/saw.tscn" id="19_r5gl0"]
 [ext_resource type="PackedScene" uid="uid://8lfg7lmi45ly" path="res://scenes/HeroSceneObjects/check_points.tscn" id="19_rwa6r"]
@@ -2592,7 +2593,7 @@ hero = NodePath("../ScenesObjects/CharacterBody2D")
 
 [node name="StartingPosition" parent="ScenesObjects" instance=ExtResource("2_4f0pa")]
 unique_name_in_owner = true
-position = Vector2(1169.01, 453.1)
+position = Vector2(647.687, 154.913)
 
 [node name="TextureRect" type="TextureRect" parent="ScenesObjects"]
 texture_filter = 1
@@ -2607,6 +2608,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_b40jr")
 stretch_mode = 1
+
+[node name="TileMap" type="TileMap" parent="ScenesObjects" groups=["Grass"]]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(1, 0)
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_4kjdo")
+format = 2
+layer_0/tile_data = PackedInt32Array(917498, 458755, 0, 917499, 458755, 0, 917500, 458755, 0, 917501, 458755, 0, 917502, 458755, 0, 917503, 458755, 0, 851970, 458755, 0, 851971, 458755, 0, 851972, 458755, 0, 851973, 458755, 0, 851974, 458755, 1, 851975, 131076, 6, 851976, 131076, 6, 851977, 131076, 6, 851978, 131076, 6, 851979, 131076, 6, 851980, 131076, 6, 851981, 131076, 6, 851986, 458755, 1, 851987, 458755, 1, 851988, 458755, 1, 851989, 458755, 1, 851990, 458755, 0, 851982, 458755, 1, 851983, 458755, 1, 851984, 458755, 1, 851985, 458755, 1, 851991, 458755, 0, 851992, 458755, 0, 851968, 458755, 0, 851969, 458755, 0, 786446, 458755, 1, 786447, 458755, 1, 720912, 524288, 0, 720913, 524288, 0, 786449, 458755, 1, 786448, 458755, 1, 720914, 458755, 1, 720915, 458755, 1, 786451, 458755, 1, 786450, 458755, 1, 720917, 458755, 1, 720916, 458755, 1, 786452, 458755, 1, 786453, 458755, 1, 655382, 524288, 0, 655383, 524288, 0, 655384, 524288, 0, 655385, 524288, 0, 655386, 524288, 0, 655387, 524288, 0, 655388, 524288, 0, 655389, 524288, 0, 655390, 524288, 0, 655391, 524288, 0, 655392, 524288, 0, 655393, 524288, 0, 655394, 524288, 0, 655395, 524288, 0, 655396, 524288, 0, 655397, 524288, 0, 655398, 524288, 0, 655399, 524288, 0, 655381, 524288, 0, 655380, 524288, 0, 655379, 524288, 0, 655378, 524288, 0, 720911, 524288, 0, 720910, 524288, 0, 851962, 65539, 1, 851963, 65539, 1, 851964, 65539, 1, 851965, 65539, 1, 786426, 65539, 1, 786427, 65539, 1, 786428, 65539, 1, 786429, 65539, 1, 524275, 458755, 1, 458739, 458755, 1, 393203, 458755, 1, 589811, 458755, 1, 327667, 458755, 1, 262131, 458755, 1, 196615, 458755, 1, 458759, 458755, 1, 393223, 458755, 1, 327687, 458755, 1, 262151, 458755, 1, 786438, 458755, 0, 131079, 458755, 1, 65543, 458755, 1, 7, 458755, 1, 6, 458755, 1, 5, 458755, 1, 4, 458755, 1, 3, 458755, 1, 2, 458755, 1, 1, 458755, 1, 0, 458755, 1, 65535, 458755, 1, 65534, 458755, 1, 65533, 458755, 1, 65532, 458755, 1, 65531, 458755, 1, 65530, 458755, 1, 65529, 458755, 1, 65528, 458755, 1, 65527, 458755, 1, 65526, 458755, 1, 65525, 458755, 1, 65524, 458755, 1, 65523, 458755, 1, 131059, 458755, 1, 196595, 458755, 1, 589812, 458755, 1, 589813, 458755, 1, 589814, 458755, 1, 589815, 458755, 1, 589816, 458755, 1, 589817, 458755, 1, 589818, 458755, 1, 589819, 458755, 1, 589820, 458755, 1, 589821, 458755, 1, 589822, 458755, 1, 589823, 458755, 1, 524288, 458755, 1, 524289, 458755, 1, 524290, 458755, 1, 524291, 458755, 1, 524292, 458755, 1, 524294, 458755, 1, 524295, 458755, 1, 524293, 458755, 1, 65563, 458755, 1, 131099, 458755, 1, 196635, 458755, 1, 262171, 458755, 1, 327707, 458755, 1, 393243, 458755, 1, 8, 458755, 1, 9, 458755, 1, 10, 458755, 1, 11, 458755, 1, 12, 458755, 1, 27, 458755, 1, 262168, 458755, 1, 262157, 458755, 1)
 
 [node name="CharacterBody2D" parent="ScenesObjects" instance=ExtResource("5_6id0e")]
 unique_name_in_owner = true
@@ -2651,7 +2661,7 @@ speedScale = 3.0
 
 [node name="Trampoline" parent="ScenesObjects/traps_objects" instance=ExtResource("16_5o745")]
 position = Vector2(701, 493)
-additionalJump = 1500.0
+additionalJump = 1200.0
 
 [node name="FallingPlatform" parent="ScenesObjects/traps_objects" instance=ExtResource("17_mi5vf")]
 position = Vector2(579, 319)
@@ -2661,25 +2671,23 @@ position = Vector2(576, 624)
 timeOff = 4
 
 [node name="Lever" parent="ScenesObjects/traps_objects/Saw" instance=ExtResource("17_q2dfh")]
-position = Vector2(-91.6667, -12.8788)
+position = Vector2(-82.5757, -9.8485)
 
 [node name="Lever2" parent="ScenesObjects/traps_objects/Saw" instance=ExtResource("17_q2dfh")]
-position = Vector2(198.485, -88.6364)
+position = Vector2(198.485, -77.2727)
 
 [node name="Lever3" parent="ScenesObjects/traps_objects/Saw" instance=ExtResource("17_q2dfh")]
-position = Vector2(-258.333, -12.8788)
+position = Vector2(-263.636, -9.8485)
 
 [node name="SpikeBalls" type="Node" parent="ScenesObjects/traps_objects"]
 unique_name_in_owner = true
 
 [node name="SpikeBall2" parent="ScenesObjects/traps_objects/SpikeBalls" instance=ExtResource("13_0lpup")]
-position = Vector2(-345, 345)
+position = Vector2(-316, 281)
 xVelocity = 500.0
-yVelocity = 300.0
 
 [node name="SpikeBall3" parent="ScenesObjects/traps_objects/SpikeBalls" instance=ExtResource("13_0lpup")]
-position = Vector2(88, 338)
-xVelocity = 200.0
+position = Vector2(117, 281)
 yVelocity = 600.0
 
 [node name="Checkpoints" type="Node" parent="ScenesObjects"]
@@ -2692,17 +2700,11 @@ position = Vector2(1214, 400)
 
 [node name="Enemies" type="Node" parent="ScenesObjects"]
 
-[node name="AnimatedSprite2D" parent="ScenesObjects/Enemies" instance=ExtResource("19_nev13")]
-position = Vector2(1576, 436)
+[node name="BlueBird" parent="ScenesObjects/Enemies" instance=ExtResource("19_iwi35")]
+position = Vector2(900, 216)
 
-[node name="TileMap" type="TileMap" parent="." groups=["Grass"]]
-unique_name_in_owner = true
-texture_filter = 1
-position = Vector2(1, 0)
-scale = Vector2(3, 3)
-tile_set = SubResource("TileSet_4kjdo")
-format = 2
-layer_0/tile_data = PackedInt32Array(917498, 458755, 0, 917499, 458755, 0, 917500, 458755, 0, 917501, 458755, 0, 917502, 458755, 0, 917503, 458755, 0, 851970, 458755, 0, 851971, 458755, 0, 851972, 458755, 0, 851973, 458755, 0, 851974, 458755, 1, 851975, 131076, 6, 851976, 131076, 6, 851977, 131076, 6, 851978, 131076, 6, 851979, 131076, 6, 851980, 131076, 6, 851981, 131076, 6, 851986, 458755, 1, 851987, 458755, 1, 851988, 458755, 1, 851989, 458755, 1, 851990, 458755, 0, 851982, 458755, 1, 851983, 458755, 1, 851984, 458755, 1, 851985, 458755, 1, 851991, 458755, 0, 851992, 458755, 0, 851968, 458755, 0, 851969, 458755, 0, 786446, 458755, 1, 786447, 458755, 1, 720912, 524288, 0, 720913, 524288, 0, 786449, 458755, 1, 786448, 458755, 1, 720914, 458755, 1, 720915, 458755, 1, 786451, 458755, 1, 786450, 458755, 1, 720917, 458755, 1, 720916, 458755, 1, 786452, 458755, 1, 786453, 458755, 1, 655382, 524288, 0, 655383, 524288, 0, 655384, 524288, 0, 655385, 524288, 0, 655386, 524288, 0, 655387, 524288, 0, 655388, 524288, 0, 655389, 524288, 0, 655390, 524288, 0, 655391, 524288, 0, 655392, 524288, 0, 655393, 524288, 0, 655394, 524288, 0, 655395, 524288, 0, 655396, 524288, 0, 655397, 524288, 0, 655398, 524288, 0, 655399, 524288, 0, 655381, 524288, 0, 655380, 524288, 0, 655379, 524288, 0, 655378, 524288, 0, 720911, 524288, 0, 720910, 524288, 0, 851962, 65539, 1, 851963, 65539, 1, 851964, 65539, 1, 851965, 65539, 1, 786426, 65539, 1, 786427, 65539, 1, 786428, 65539, 1, 786429, 65539, 1, 524275, 458755, 1, 458739, 458755, 1, 393203, 458755, 1, 393229, 458755, 1, 327693, 458755, 1, 262157, 458755, 1, 589811, 458755, 1, 327667, 458755, 1, 262131, 458755, 1, 196615, 458755, 1, 458759, 458755, 1, 393223, 458755, 1, 327687, 458755, 1, 262151, 458755, 1, 786438, 458755, 0, 131079, 458755, 1, 65543, 458755, 1, 7, 458755, 1, 6, 458755, 1, 5, 458755, 1, 4, 458755, 1, 3, 458755, 1, 2, 458755, 1, 1, 458755, 1, 0, 458755, 1, 65535, 458755, 1, 65534, 458755, 1, 65533, 458755, 1, 65532, 458755, 1, 65531, 458755, 1, 65530, 458755, 1, 65529, 458755, 1, 65528, 458755, 1, 65527, 458755, 1, 65526, 458755, 1, 65525, 458755, 1, 65524, 458755, 1, 65523, 458755, 1, 131059, 458755, 1, 196595, 458755, 1, 589812, 458755, 1, 589813, 458755, 1, 589814, 458755, 1, 589815, 458755, 1, 589816, 458755, 1, 589817, 458755, 1, 589818, 458755, 1, 589819, 458755, 1, 589820, 458755, 1, 589821, 458755, 1, 589822, 458755, 1, 589823, 458755, 1, 524288, 458755, 1, 524289, 458755, 1, 524290, 458755, 1, 524291, 458755, 1, 524292, 458755, 1, 524294, 458755, 1, 524295, 458755, 1, 524293, 458755, 1)
+[node name="Plant" parent="ScenesObjects/Enemies" instance=ExtResource("19_nev13")]
+position = Vector2(1549, 436)
 
 [node name="UI" parent="." instance=ExtResource("11_lcsh2")]
 unique_name_in_owner = true
