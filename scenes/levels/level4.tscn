@@ -2591,7 +2591,7 @@ hero = NodePath("../ScenesObjects/CharacterBody2D")
 
 [node name="StartingPosition" parent="ScenesObjects" instance=ExtResource("3_r2ukq")]
 unique_name_in_owner = true
-position = Vector2(4757.47, 3290.52)
+position = Vector2(-456.894, 223.709)
 
 [node name="TextureRect" type="TextureRect" parent="ScenesObjects"]
 texture_filter = 1
