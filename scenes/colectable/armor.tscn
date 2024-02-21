@@ -1,10 +1,25 @@
 [gd_scene load_steps=7 format=3 uid="uid://bxmrabqx7vob0"]
 
-[ext_resource type="Texture2D" path="res://level_objects_pngs/UIs/shield.png" id="1_ktvxd"]
+[ext_resource type="Texture2D" uid="uid://hck3yo3a0t60" path="res://level_objects_pngs/UIs/shield.png" id="1_ktvxd"]
 [ext_resource type="Script" path="res://scripts/colectable/armor.cs" id="1_lcie5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4q3af"]
 size = Vector2(17.7638, 21.6047)
+
+[sub_resource type="Animation" id="Animation_wq1dj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_lgdrx"]
 resource_name = "iddle"
@@ -21,21 +36,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 0.349066, 0.0, -0.349066, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_wq1dj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l8i01"]

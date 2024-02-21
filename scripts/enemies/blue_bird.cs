@@ -10,7 +10,8 @@ public partial class blue_bird : RigidBody2D
 	public override void _Ready()
 	{
 		gameManager = GetNode<GameManager>("%GameManager");
-		ConstantForce = new Vector2(-speed, 0);
+		LinearVelocity = new Vector2(-speed, 0);
+		ConstantForce = new Vector2(-speed / 5, 0);
 		animatedSprite2D = GetChild<AnimatedSprite2D>(0);
 
 	}
@@ -19,14 +20,14 @@ public partial class blue_bird : RigidBody2D
 		animatedSprite2D.Scale = new Vector2(-animatedSprite2D.Scale.X, animatedSprite2D.Scale.Y);
 		if (speed > 0)
 		{
-			LinearVelocity = new Vector2(speed / 4, 0);
-			ConstantForce = new Vector2(speed, 0);
+			LinearVelocity = new Vector2(speed, 0);
+			ConstantForce = new Vector2(speed / 5, 0);
 			speed = -speed;
 		}
 		else
 		{
-			LinearVelocity = new Vector2(speed / 4, 0);
-			ConstantForce = new Vector2(speed, 0);
+			LinearVelocity = new Vector2(speed, 0);
+			ConstantForce = new Vector2(speed / 5, 0);
 			speed = -speed;
 		}
 	}
@@ -35,7 +36,7 @@ public partial class blue_bird : RigidBody2D
 		if (body.Velocity.Y > 0)
 		{
 			animatedSprite2D.Animation = "Hit";
-			body.Velocity = new Vector2(body.Velocity.X, -900);
+			body.Velocity = new Vector2(body.Velocity.X, -1300);
 			LinearVelocity = new Vector2(speed, 0);
 			gameManager.AddCherriesPoints(3);
 		}
@@ -44,8 +45,8 @@ public partial class blue_bird : RigidBody2D
 	{
 		if (body.Name == "CharacterBody2D" && animatedSprite2D.Animation != "Hit")
 		{
-			LinearVelocity = new Vector2(speed / 4, 0);
-			ConstantForce = new Vector2(speed, 0);
+			LinearVelocity = new Vector2(speed, 0);
+			ConstantForce = new Vector2(speed / 5, 0);
 			animatedSprite2D.Scale = new Vector2(-animatedSprite2D.Scale.X, animatedSprite2D.Scale.Y);
 			speed = -speed;
 			gameManager.DoDamage();

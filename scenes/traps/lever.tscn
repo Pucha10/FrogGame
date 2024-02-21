@@ -50,4 +50,7 @@ autoplay = "Off"
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_hq8re")
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="OnBodyEntered"]
+[connection signal="timeout" from="Timer" to="." method="OnTimeout"]
